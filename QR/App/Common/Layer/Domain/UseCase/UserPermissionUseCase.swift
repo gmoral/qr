@@ -15,7 +15,7 @@ protocol UserPermissionUseCase {
 
 struct UserPermissionUseCaseImp: UserPermissionUseCase {
     
-    var cameraService: CameraService
+    private let cameraService: CameraService
     
     init(cameraService: CameraService) {
         self.cameraService = cameraService

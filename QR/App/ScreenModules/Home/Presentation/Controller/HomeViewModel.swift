@@ -24,5 +24,4 @@ final class HomeViewModelImp: HomeViewModel {
     func viewDidLoad() {
         state.send(.success)
     }
-
 }

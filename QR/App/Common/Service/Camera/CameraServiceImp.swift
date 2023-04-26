@@ -9,6 +9,18 @@ import Foundation
 import AVFoundation
 import UIKit
 
+actor AuthorizationActor {
+    private var status = AVAuthorizationStatus.denied
+    
+    func setStatus(newStatus: AVAuthorizationStatus) {
+        status = newStatus
+    }
+    
+    func getStatus()->AVAuthorizationStatus {
+        return status
+    }
+}
+
 struct CameraServiceImp: CameraService{
     
     func requestAuthorizationStatus() async -> AVAuthorizationStatus {
@@ -28,17 +40,16 @@ struct CameraServiceImp: CameraService{
     }
     
     func requestAccess() async -> AVAuthorizationStatus {
+        let authorizationActor = AuthorizationActor()
         
-        var status = AVAuthorizationStatus.denied
+        AVCaptureDevice.requestAccess(for: .video) { granted in
+            if granted {
+                Task {
+                    await authorizationActor .setStatus(newStatus: .authorized)
+                }
+            }
+        }
         
-//        DispatchQueue.main.async {
-//            AVCaptureDevice.requestAccess(for: .video) { granted in
-//                if granted {
-//                    
-//                    // status = AVAuthorizationStatus.authorized
-//                }
-//            }
-//        }
-        return status
+        return await authorizationActor.getStatus()
     }
 }

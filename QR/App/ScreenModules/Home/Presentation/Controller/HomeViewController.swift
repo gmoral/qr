@@ -98,7 +98,26 @@ class HomeViewController: UIViewController {
     }
     
     @objc func redirectQR() {
-        coordinator?.goToQR()
+        let cameraService = CameraServiceImp()
+        let userPermissionUseCase = UserPermissionUseCaseImp(cameraService: cameraService)
+        
+        Task {
+            let status = await userPermissionUseCase.requestCameraAccess()
+            
+            switch status {
+                
+            case .notDetermined:
+                print("notDetermined")
+            case .restricted:
+                print("restricted")
+            case .denied:
+                print("denied")
+            case .authorized:
+                print("authorized")
+            @unknown default:
+                print(">> notDetermined <<")
+            }
+        }
     }
 }
 
