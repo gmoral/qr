@@ -42,13 +42,22 @@ struct CameraServiceImp: CameraService{
     func requestAccess() async -> AVAuthorizationStatus {
         let authorizationActor = AuthorizationActor()
         
-        AVCaptureDevice.requestAccess(for: .video) { granted in
-            if granted {
-                Task {
-                    await authorizationActor .setStatus(newStatus: .authorized)
+        let blocker = DispatchGroup()
+        
+        blocker.enter()
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    Task {
+                        await authorizationActor .setStatus(newStatus: .authorized)
+                    }
                 }
+                blocker.leave()
             }
         }
+        
+        blocker.wait()
         
         return await authorizationActor.getStatus()
     }
