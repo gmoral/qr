@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BA836A8029F9BD0C0048B177 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */; };
+		BAAFC8B829FAAB8700F991A5 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8B729FAAB8700F991A5 /* QRViewController.swift */; };
+		BAAFC8BA29FAABA200F991A5 /* QRStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8B929FAABA200F991A5 /* QRStateController.swift */; };
+		BAAFC8BC29FAABB300F991A5 /* QRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8BB29FAABB300F991A5 /* QRViewModel.swift */; };
 		BAD1FCBF29F9704700B68B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */; };
 		BAD1FCC129F9704700B68B7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */; };
 		BAD1FCC829F9704800B68B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD1FCC729F9704800B68B7F /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		BAAFC8B729FAAB8700F991A5 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		BAAFC8B929FAABA200F991A5 /* QRStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRStateController.swift; sourceTree = "<group>"; };
+		BAAFC8BB29FAABB300F991A5 /* QRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewModel.swift; sourceTree = "<group>"; };
 		BAD1FCBB29F9704700B68B7F /* QR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAAFC8B029FAAB0F00F991A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAAFC8B929FAABA200F991A5 /* QRStateController.swift */,
+				BAAFC8B729FAAB8700F991A5 /* QRViewController.swift */,
+				BAAFC8BB29FAABB300F991A5 /* QRViewModel.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAAFC8B129FAAB2B00F991A5 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		BAAFC8B229FAAB3600F991A5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BAAFC8B329FAAB3E00F991A5 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		BAAFC8B429FAAB4E00F991A5 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		BAAFC8B529FAAB5500F991A5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		BAD1FCB229F9704700B68B7F = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +474,9 @@
 		BAD1FD2229F9A16A00B68B7F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BAAFC8B129FAAB2B00F991A5 /* UseCase */,
+				BAAFC8B229FAAB3600F991A5 /* Entities */,
+				BAAFC8B329FAAB3E00F991A5 /* Interfaces */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -430,6 +484,8 @@
 		BAD1FD2329F9A3C300B68B7F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BAAFC8B529FAAB5500F991A5 /* Repositories */,
+				BAAFC8B429FAAB4E00F991A5 /* DTO */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -437,6 +493,7 @@
 		BAD1FD2429F9A3CA00B68B7F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BAAFC8B029FAAB0F00F991A5 /* Controller */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -521,12 +578,15 @@
 				BAD1FCC129F9704700B68B7F /* SceneDelegate.swift in Sources */,
 				BAD1FD0129F99B2000B68B7F /* ApiClientServiceImp.swift in Sources */,
 				BAD1FCFD29F99B1600B68B7F /* ApiError.swift in Sources */,
+				BAAFC8BC29FAABB300F991A5 /* QRViewModel.swift in Sources */,
+				BAAFC8BA29FAABA200F991A5 /* QRStateController.swift in Sources */,
 				BAD1FCF329F99A3900B68B7F /* HomeViewModel.swift in Sources */,
 				BAD1FD1829F99CB000B68B7F /* MessageDisplayable.swift in Sources */,
 				BAD1FCD829F9881300B68B7F /* Coordinator.swift in Sources */,
 				BAD1FD1C29F99CC200B68B7F /* CameraServiceImp.swift in Sources */,
 				BAD1FD2029F99D0A00B68B7F /* ViewValues.swift in Sources */,
 				BAD1FCFB29F99B0A00B68B7F /* HttpResponseStatus.swift in Sources */,
+				BAAFC8B829FAAB8700F991A5 /* QRViewController.swift in Sources */,
 				BAD1FCDD29F997AB00B68B7F /* AppFactory.swift in Sources */,
 				BAD1FCF129F99A1B00B68B7F /* HomeViewController.swift in Sources */,
 				BAD1FCE029F9981500B68B7F /* HomeFactory.swift in Sources */,
