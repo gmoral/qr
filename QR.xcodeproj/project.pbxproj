@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BA836A8029F9BD0C0048B177 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */; };
-		BAAFC8B829FAAB8700F991A5 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8B729FAAB8700F991A5 /* QRViewController.swift */; };
-		BAAFC8BA29FAABA200F991A5 /* QRStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8B929FAABA200F991A5 /* QRStateController.swift */; };
-		BAAFC8BC29FAABB300F991A5 /* QRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8BB29FAABB300F991A5 /* QRViewModel.swift */; };
+		BAAFC8B829FAAB8700F991A5 /* ScannQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8B729FAAB8700F991A5 /* ScannQRViewController.swift */; };
+		BAAFC8BA29FAABA200F991A5 /* ScannQRStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8B929FAABA200F991A5 /* ScannQRStateController.swift */; };
+		BAAFC8BC29FAABB300F991A5 /* ScannQRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8BB29FAABB300F991A5 /* ScannQRViewModel.swift */; };
+		BAAFC8BE29FAB7D100F991A5 /* ScannQRCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8BD29FAB7D100F991A5 /* ScannQRCoordinator.swift */; };
+		BAAFC8C029FAB98D00F991A5 /* ScannQRFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8BF29FAB98D00F991A5 /* ScannQRFactory.swift */; };
 		BAD1FCBF29F9704700B68B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */; };
 		BAD1FCC129F9704700B68B7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */; };
 		BAD1FCC829F9704800B68B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD1FCC729F9704800B68B7F /* Assets.xcassets */; };
@@ -38,9 +40,11 @@
 
 /* Begin PBXFileReference section */
 		BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		BAAFC8B729FAAB8700F991A5 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
-		BAAFC8B929FAABA200F991A5 /* QRStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRStateController.swift; sourceTree = "<group>"; };
-		BAAFC8BB29FAABB300F991A5 /* QRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewModel.swift; sourceTree = "<group>"; };
+		BAAFC8B729FAAB8700F991A5 /* ScannQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRViewController.swift; sourceTree = "<group>"; };
+		BAAFC8B929FAABA200F991A5 /* ScannQRStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRStateController.swift; sourceTree = "<group>"; };
+		BAAFC8BB29FAABB300F991A5 /* ScannQRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRViewModel.swift; sourceTree = "<group>"; };
+		BAAFC8BD29FAB7D100F991A5 /* ScannQRCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRCoordinator.swift; sourceTree = "<group>"; };
+		BAAFC8BF29FAB98D00F991A5 /* ScannQRFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRFactory.swift; sourceTree = "<group>"; };
 		BAD1FCBB29F9704700B68B7F /* QR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,9 +86,9 @@
 		BAAFC8B029FAAB0F00F991A5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BAAFC8B929FAABA200F991A5 /* QRStateController.swift */,
-				BAAFC8B729FAAB8700F991A5 /* QRViewController.swift */,
-				BAAFC8BB29FAABB300F991A5 /* QRViewModel.swift */,
+				BAAFC8B929FAABA200F991A5 /* ScannQRStateController.swift */,
+				BAAFC8B729FAAB8700F991A5 /* ScannQRViewController.swift */,
+				BAAFC8BB29FAABB300F991A5 /* ScannQRViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */,
+				BAAFC8BD29FAB7D100F991A5 /* ScannQRCoordinator.swift */,
 			);
 			path = CoordinatorScreen;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			children = (
 				BAD1FCDC29F997AB00B68B7F /* AppFactory.swift */,
 				BAD1FCDF29F9981500B68B7F /* HomeFactory.swift */,
+				BAAFC8BF29FAB98D00F991A5 /* ScannQRFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -227,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD1FCE429F9991E00B68B7F /* LaunchScreen */,
-				BAD1FD2129F9A16100B68B7F /* QR */,
+				BAD1FD2129F9A16100B68B7F /* ScannQR */,
 				BAD1FCE529F9996300B68B7F /* Home */,
 			);
 			path = ScreenModules;
@@ -461,14 +467,14 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
-		BAD1FD2129F9A16100B68B7F /* QR */ = {
+		BAD1FD2129F9A16100B68B7F /* ScannQR */ = {
 			isa = PBXGroup;
 			children = (
 				BAD1FD2229F9A16A00B68B7F /* Domain */,
 				BAD1FD2329F9A3C300B68B7F /* Data */,
 				BAD1FD2429F9A3CA00B68B7F /* Presentation */,
 			);
-			path = QR;
+			path = ScannQR;
 			sourceTree = "<group>";
 		};
 		BAD1FD2229F9A16A00B68B7F /* Domain */ = {
@@ -574,19 +580,21 @@
 				BAD1FD1029F99C5500B68B7F /* HomeStateController.swift in Sources */,
 				BAD1FCDA29F9885D00B68B7F /* AppCoordinator.swift in Sources */,
 				BAD1FCBF29F9704700B68B7F /* AppDelegate.swift in Sources */,
+				BAAFC8C029FAB98D00F991A5 /* ScannQRFactory.swift in Sources */,
 				BAD1FD0329F99B3000B68B7F /* Endpoint.swift in Sources */,
 				BAD1FCC129F9704700B68B7F /* SceneDelegate.swift in Sources */,
 				BAD1FD0129F99B2000B68B7F /* ApiClientServiceImp.swift in Sources */,
 				BAD1FCFD29F99B1600B68B7F /* ApiError.swift in Sources */,
-				BAAFC8BC29FAABB300F991A5 /* QRViewModel.swift in Sources */,
-				BAAFC8BA29FAABA200F991A5 /* QRStateController.swift in Sources */,
+				BAAFC8BC29FAABB300F991A5 /* ScannQRViewModel.swift in Sources */,
+				BAAFC8BA29FAABA200F991A5 /* ScannQRStateController.swift in Sources */,
 				BAD1FCF329F99A3900B68B7F /* HomeViewModel.swift in Sources */,
 				BAD1FD1829F99CB000B68B7F /* MessageDisplayable.swift in Sources */,
 				BAD1FCD829F9881300B68B7F /* Coordinator.swift in Sources */,
 				BAD1FD1C29F99CC200B68B7F /* CameraServiceImp.swift in Sources */,
 				BAD1FD2029F99D0A00B68B7F /* ViewValues.swift in Sources */,
+				BAAFC8BE29FAB7D100F991A5 /* ScannQRCoordinator.swift in Sources */,
 				BAD1FCFB29F99B0A00B68B7F /* HttpResponseStatus.swift in Sources */,
-				BAAFC8B829FAAB8700F991A5 /* QRViewController.swift in Sources */,
+				BAAFC8B829FAAB8700F991A5 /* ScannQRViewController.swift in Sources */,
 				BAD1FCDD29F997AB00B68B7F /* AppFactory.swift in Sources */,
 				BAD1FCF129F99A1B00B68B7F /* HomeViewController.swift in Sources */,
 				BAD1FCE029F9981500B68B7F /* HomeFactory.swift in Sources */,

@@ -24,8 +24,9 @@ final class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator : HomeViewControllerCoordinator {
     
-    func goToQR() {
-       print("Go to Scann QR")
+    func redirectScannQR() {
+        let coordinator = homeFactory.makeCoordinatorScannQR(
+            navigation: navigation)
+        coordinator.start()
     }
-    
 }

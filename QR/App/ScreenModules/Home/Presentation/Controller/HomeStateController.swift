@@ -7,12 +7,5 @@
 
 enum HomeStateController {
     case start
-    case success
-    case fail(error: String)
-    case loading
-    case authorized
-    case denied
-    case notDetermined
-    case restricted
     case end
 }

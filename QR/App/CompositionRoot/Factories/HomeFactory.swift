@@ -9,7 +9,9 @@ import UIKit
 import Combine
 
 protocol HomeFactory {
+    
     func makeModule(coordinator: HomeViewControllerCoordinator) -> UIViewController
+    func makeCoordinatorScannQR(navigation: UINavigationController) -> Coordinator
 }
 
 struct HomeFactoryImp: HomeFactory {
@@ -24,5 +26,10 @@ struct HomeFactoryImp: HomeFactory {
         
         return homeViewController
     }
-    
+
+    func makeCoordinatorScannQR(navigation: UINavigationController) -> Coordinator {
+        let scannQRFactory = ScannQRFactoryImp()
+        let scannQRCoordinator = ScannQRCoordinator(navigation: navigation, scannQRFactory: scannQRFactory)
+        return scannQRCoordinator
+    }
 }
