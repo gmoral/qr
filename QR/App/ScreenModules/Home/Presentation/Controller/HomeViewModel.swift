@@ -16,13 +16,17 @@ protocol HomeViewModel {
 
 final class HomeViewModelImp: HomeViewModel {
     
-    let userPermissionUseCase: UserPermissionUseCase
     var state: PassthroughSubject<HomeStateController, Never>
+    let userPermissionUseCase: UserPermissionUseCase
+    
+    // MARK: CONSTRUCTOR
     
     init(state: PassthroughSubject<HomeStateController, Never>, userPermissionUseCase: UserPermissionUseCase) {
         self.state = state
         self.userPermissionUseCase = userPermissionUseCase
     }
+    
+    // MARK: CUSTOM
     
     func viewDidLoad() {
         state.send(.start)
