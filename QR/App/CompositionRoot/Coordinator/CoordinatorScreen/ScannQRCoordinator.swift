@@ -8,8 +8,9 @@
 import UIKit
 
 final class ScannQRCoordinator: Coordinator {
+    
     var navigation: UINavigationController
-    private let scannQRFactory: ScannQRFactory
+    private var scannQRFactory: ScannQRFactory
     
     init(navigation: UINavigationController, scannQRFactory: ScannQRFactory) {
         self.navigation = navigation
@@ -22,8 +23,9 @@ final class ScannQRCoordinator: Coordinator {
     }
 }
 
-extension ScannQRCoordinator: ScannQRViewControllerCoordinator{
-    func toDO() {
-        print("toDO...")
+extension ScannQRCoordinator: ScannQRViewControllerCoordinator {
+    
+    func popViewController() {
+        self.navigation.popViewController(animated: true)
     }
 }

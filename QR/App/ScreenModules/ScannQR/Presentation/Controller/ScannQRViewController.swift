@@ -8,8 +8,8 @@
 import UIKit
 import Combine
 
-protocol ScannQRViewControllerCoordinator: AnyObject {
-    func toDO()
+protocol ScannQRViewControllerCoordinator {
+    func popViewController()
 }
 
 class ScannQRViewController: UIViewController {
@@ -18,7 +18,7 @@ class ScannQRViewController: UIViewController {
     
     private let viewModel: ScannQRViewModel
     private var cancellable = Set<AnyCancellable>()
-    private weak var coordinator: ScannQRViewControllerCoordinator?
+    private var coordinator: ScannQRViewControllerCoordinator
     
     // MARK: CUSTOM VIEW
     
@@ -216,6 +216,7 @@ class ScannQRViewController: UIViewController {
                         print("authorized")
                     case .denied:
                         print("denid")
+                        self.coordinator.popViewController()
                     case .notDetermined:
                         print("notDetermined")
                     case .restricted:

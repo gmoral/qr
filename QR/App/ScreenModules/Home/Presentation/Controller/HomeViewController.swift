@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-protocol HomeViewControllerCoordinator : AnyObject {
+protocol HomeViewControllerCoordinator {
     func redirectScannQR()
 }
 
@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     
     private let viewModel: HomeViewModel
     private var cancellable = Set<AnyCancellable>()
-    private weak var coordinator: HomeViewControllerCoordinator?
+    private var coordinator: HomeViewControllerCoordinator
 
     // MARK: VIEW
     
@@ -106,7 +106,7 @@ class HomeViewController: UIViewController {
     
     // MARK: EVENT
     @objc func redirectQR() {
-        coordinator?.redirectScannQR()
+        coordinator.redirectScannQR()
     }
 }
 
