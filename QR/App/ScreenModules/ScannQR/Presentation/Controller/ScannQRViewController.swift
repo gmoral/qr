@@ -200,16 +200,18 @@ class ScannQRViewController: UIViewController {
             .state
             .receive(on: RunLoop.main)
             .sink { [weak self] state in
-                self?.hideSpinner()
+                guard let self = self else { return }
+                self.hideSpinner()
                 switch state {
                     case .start:
                         print(">> Start <<")
+                        self.viewModel.requestCameraAccess()
                     case .success:
                         print("Success")
                     case .loading:
-                        self?.showSpinner()
+                        self.showSpinner()
                     case .fail(error: let error):
-                        self?.presentAlert(message: error, title: "Error")
+                        self.presentAlert(message: error, title: "Error")
                     case .authorized:
                         print("authorized")
                     case .denied:
