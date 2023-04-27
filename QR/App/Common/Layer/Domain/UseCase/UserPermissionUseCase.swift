@@ -22,18 +22,6 @@ struct UserPermissionUseCaseImp: UserPermissionUseCase {
     }
     
     func requestCameraAccess()  async -> AVAuthorizationStatus {
-        switch await cameraService.requestAuthorizationStatus() {
-            
-        case .notDetermined:
-            return await cameraService.requestAccess()
-        case .restricted:
-            return .restricted
-        case .denied:
-            return .denied
-        case .authorized:
-            return .authorized
-        @unknown default:
-            return .notDetermined
-        }
+        return await cameraService.requestAuthorization()
     }
 }

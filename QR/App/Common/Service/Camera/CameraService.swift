@@ -10,6 +10,5 @@ import AVFoundation
 import UIKit
 
 protocol CameraService {
-    func requestAuthorizationStatus() async -> AVAuthorizationStatus
-    func requestAccess() async -> AVAuthorizationStatus
+    func requestAuthorization() async -> AVAuthorizationStatus
 }

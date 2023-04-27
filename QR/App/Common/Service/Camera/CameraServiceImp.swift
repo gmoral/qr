@@ -22,43 +22,31 @@ actor AuthorizationActor {
 }
 
 struct CameraServiceImp: CameraService{
-    
-    func requestAuthorizationStatus() async -> AVAuthorizationStatus {
         
-        switch AVCaptureDevice.authorizationStatus(for: .video) {
-            case .notDetermined:
-                return .notDetermined
-            case .restricted:
-                return .restricted
-            case .denied:
-                return .denied
-            case .authorized:
-                return .authorized
-            @unknown default:
-                return .notDetermined
-        }
-    }
-    
-    func requestAccess() async -> AVAuthorizationStatus {
-        let authorizationActor = AuthorizationActor()
-        
-        let blocker = DispatchGroup()
-        
-        blocker.enter()
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            AVCaptureDevice.requestAccess(for: .video) { granted in
-                if granted {
-                    Task {
-                        await authorizationActor .setStatus(newStatus: .authorized)
-                    }
-                }
-                blocker.leave()
+    var isAuthorized: AVAuthorizationStatus {
+        get async {
+            var status = AVCaptureDevice.authorizationStatus(for: .video)
+            
+            var  authorized = false
+            
+            if status == .notDetermined {
+                authorized = await AVCaptureDevice.requestAccess(for: .video)
+            } else {
+                return status
             }
+            
+            if authorized {
+                status = .authorized
+            } else {
+                status = .denied
+            }
+            
+            return status
         }
-        
-        blocker.wait()
-        
-        return await authorizationActor.getStatus()
     }
+
+    func requestAuthorization() async -> AVAuthorizationStatus {
+        return await isAuthorized
+    }
+    
 }

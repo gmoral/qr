@@ -8,6 +8,10 @@
 enum StateController {
     case success
     case loading
+    case authorized
+    case denied
+    case notDetermined
+    case restricted
     case fail(error: String)
 }
 

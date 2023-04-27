@@ -54,9 +54,7 @@ class HomeViewController: UIViewController {
         viewModel.viewDidLoad()
     }
     
-    
     func buildViewHierarchy() {
-        // Add View
         view.addSubview(qrView)
         view.addSubview(qrButton)
     }
@@ -87,37 +85,26 @@ class HomeViewController: UIViewController {
             .sink { [weak self] state in
                 self?.hideSpinner()
             switch state {
-            case .success:
-                print("Success")
-            case .loading:
-                self?.showSpinner()
-            case .fail(error: let error):
-                self?.presentAlert(message: error, title: "Error")
+                case .success:
+                    print("Success")
+                case .loading:
+                    self?.showSpinner()
+                case .fail(error: let error):
+                    self?.presentAlert(message: error, title: "Error")
+                case .authorized:
+                    print("authorized")
+                case .denied:
+                    print("denid")
+                case .notDetermined:
+                    print("notDetermined")
+                case .restricted:
+                    print("restricted")
             }
         }.store(in: &cancellable)
     }
     
     @objc func redirectQR() {
-        let cameraService = CameraServiceImp()
-        let userPermissionUseCase = UserPermissionUseCaseImp(cameraService: cameraService)
-        
-        Task {
-            let status = await userPermissionUseCase.requestCameraAccess()
-            
-            switch status {
-                
-            case .notDetermined:
-                print("notDetermined")
-            case .restricted:
-                print("restricted")
-            case .denied:
-                print("denied")
-            case .authorized:
-                print("authorized")
-            @unknown default:
-                print(">> notDetermined <<")
-            }
-        }
+        viewModel.requestCameraAccess()
     }
 }
 
