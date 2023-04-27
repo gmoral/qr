@@ -23,7 +23,7 @@
 		BAD1FD0029F99B2000B68B7F /* ApiClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCFE29F99B2000B68B7F /* ApiClientService.swift */; };
 		BAD1FD0129F99B2000B68B7F /* ApiClientServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCFF29F99B2000B68B7F /* ApiClientServiceImp.swift */; };
 		BAD1FD0329F99B3000B68B7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD0229F99B3000B68B7F /* Endpoint.swift */; };
-		BAD1FD1029F99C5500B68B7F /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD0F29F99C5500B68B7F /* StateController.swift */; };
+		BAD1FD1029F99C5500B68B7F /* HomeStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD0F29F99C5500B68B7F /* HomeStateController.swift */; };
 		BAD1FD1329F99C7600B68B7F /* UserPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1229F99C7600B68B7F /* UserPermissionUseCase.swift */; };
 		BAD1FD1529F99C9800B68B7F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1429F99C9800B68B7F /* UIView+Constraints.swift */; };
 		BAD1FD1829F99CB000B68B7F /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1629F99CB000B68B7F /* MessageDisplayable.swift */; };
@@ -52,7 +52,7 @@
 		BAD1FCFE29F99B2000B68B7F /* ApiClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientService.swift; sourceTree = "<group>"; };
 		BAD1FCFF29F99B2000B68B7F /* ApiClientServiceImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImp.swift; sourceTree = "<group>"; };
 		BAD1FD0229F99B3000B68B7F /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		BAD1FD0F29F99C5500B68B7F /* StateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		BAD1FD0F29F99C5500B68B7F /* HomeStateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeStateController.swift; sourceTree = "<group>"; };
 		BAD1FD1229F99C7600B68B7F /* UserPermissionUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPermissionUseCase.swift; sourceTree = "<group>"; };
 		BAD1FD1429F99C9800B68B7F /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		BAD1FD1629F99CB000B68B7F /* MessageDisplayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
@@ -265,6 +265,7 @@
 		BAD1FCEF29F99A0100B68B7F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BAD1FD0F29F99C5500B68B7F /* HomeStateController.swift */,
 				BAD1FCF029F99A1B00B68B7F /* HomeViewController.swift */,
 				BAD1FCF229F99A3900B68B7F /* HomeViewModel.swift */,
 			);
@@ -356,7 +357,6 @@
 		BAD1FD0829F99BBA00B68B7F /* Layer */ = {
 			isa = PBXGroup;
 			children = (
-				BAD1FD0D29F99C3400B68B7F /* Presentation */,
 				BAD1FD0E29F99C3B00B68B7F /* Domain */,
 			);
 			path = Layer;
@@ -383,14 +383,6 @@
 			children = (
 			);
 			path = Localize;
-			sourceTree = "<group>";
-		};
-		BAD1FD0D29F99C3400B68B7F /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				BAD1FD0F29F99C5500B68B7F /* StateController.swift */,
-			);
-			path = Presentation;
 			sourceTree = "<group>";
 		};
 		BAD1FD0E29F99C3B00B68B7F /* Domain */ = {
@@ -522,7 +514,7 @@
 				BAD1FD1D29F99CC200B68B7F /* CameraService.swift in Sources */,
 				BAD1FD1929F99CB000B68B7F /* SpinnerDisplayable.swift in Sources */,
 				BAD1FD0029F99B2000B68B7F /* ApiClientService.swift in Sources */,
-				BAD1FD1029F99C5500B68B7F /* StateController.swift in Sources */,
+				BAD1FD1029F99C5500B68B7F /* HomeStateController.swift in Sources */,
 				BAD1FCDA29F9885D00B68B7F /* AppCoordinator.swift in Sources */,
 				BAD1FCBF29F9704700B68B7F /* AppDelegate.swift in Sources */,
 				BAD1FD0329F99B3000B68B7F /* Endpoint.swift in Sources */,

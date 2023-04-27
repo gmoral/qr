@@ -84,22 +84,26 @@ class HomeViewController: UIViewController {
             .receive(on: RunLoop.main)
             .sink { [weak self] state in
                 self?.hideSpinner()
-            switch state {
-                case .success:
-                    print("Success")
-                case .loading:
-                    self?.showSpinner()
-                case .fail(error: let error):
-                    self?.presentAlert(message: error, title: "Error")
-                case .authorized:
-                    print("authorized")
-                case .denied:
-                    print("denid")
-                case .notDetermined:
-                    print("notDetermined")
-                case .restricted:
-                    print("restricted")
-            }
+                switch state {
+                    case .start:
+                        print(">> Start <<")
+                    case .success:
+                        print("Success")
+                    case .loading:
+                        self?.showSpinner()
+                    case .fail(error: let error):
+                        self?.presentAlert(message: error, title: "Error")
+                    case .authorized:
+                        print("authorized")
+                    case .denied:
+                        print("denid")
+                    case .notDetermined:
+                        print("notDetermined")
+                    case .restricted:
+                        print("restricted")
+                    case .end:
+                        print("end")
+                }
         }.store(in: &cancellable)
     }
     

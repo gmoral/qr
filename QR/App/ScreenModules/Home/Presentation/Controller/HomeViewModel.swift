@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 protocol HomeViewModel {
-    var state: PassthroughSubject<StateController, Never> { get }
+    var state: PassthroughSubject<HomeStateController, Never> { get }
     func viewDidLoad()
     func requestCameraAccess()
 }
@@ -17,15 +17,15 @@ protocol HomeViewModel {
 final class HomeViewModelImp: HomeViewModel {
     
     let userPermissionUseCase: UserPermissionUseCase
-    var state: PassthroughSubject<StateController, Never>
+    var state: PassthroughSubject<HomeStateController, Never>
     
-    init(state: PassthroughSubject<StateController, Never>, userPermissionUseCase: UserPermissionUseCase) {
+    init(state: PassthroughSubject<HomeStateController, Never>, userPermissionUseCase: UserPermissionUseCase) {
         self.state = state
         self.userPermissionUseCase = userPermissionUseCase
     }
     
     func viewDidLoad() {
-        state.send(.success)
+        state.send(.start)
     }
     
     func requestCameraAccess() {
