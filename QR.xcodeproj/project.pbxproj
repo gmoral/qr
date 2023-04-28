@@ -7,21 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA836A8029F9BD0C0048B177 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */; };
+		BA95245E29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */; };
+		BA95246029FC4F0A005D3CC0 /* DeviceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95245F29FC4F0A005D3CC0 /* DeviceUseCase.swift */; };
+		BA95246329FC4FB2005D3CC0 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95246229FC4FB2005D3CC0 /* DeviceService.swift */; };
+		BA95246529FC4FF6005D3CC0 /* DeviceServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95246429FC4FF6005D3CC0 /* DeviceServiceImp.swift */; };
+		BAAFC8B829FAAB8700F991A5 /* ScannQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8B729FAAB8700F991A5 /* ScannQRViewController.swift */; };
+		BAAFC8BA29FAABA200F991A5 /* ScannQRStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8B929FAABA200F991A5 /* ScannQRStateController.swift */; };
+		BAAFC8BC29FAABB300F991A5 /* ScannQRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8BB29FAABB300F991A5 /* ScannQRViewModel.swift */; };
+		BAAFC8BE29FAB7D100F991A5 /* ScannQRCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8BD29FAB7D100F991A5 /* ScannQRCoordinator.swift */; };
+		BAAFC8C029FAB98D00F991A5 /* ScannQRFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFC8BF29FAB98D00F991A5 /* ScannQRFactory.swift */; };
 		BAD1FCBF29F9704700B68B7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */; };
 		BAD1FCC129F9704700B68B7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */; };
-		BAD1FCC329F9704700B68B7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCC229F9704700B68B7F /* ViewController.swift */; };
 		BAD1FCC829F9704800B68B7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD1FCC729F9704800B68B7F /* Assets.xcassets */; };
 		BAD1FCCB29F9704800B68B7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD1FCC929F9704800B68B7F /* LaunchScreen.storyboard */; };
+		BAD1FCD829F9881300B68B7F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCD729F9881300B68B7F /* Coordinator.swift */; };
+		BAD1FCDA29F9885D00B68B7F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCD929F9885D00B68B7F /* AppCoordinator.swift */; };
+		BAD1FCDD29F997AB00B68B7F /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCDC29F997AB00B68B7F /* AppFactory.swift */; };
+		BAD1FCE029F9981500B68B7F /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCDF29F9981500B68B7F /* HomeFactory.swift */; };
+		BAD1FCF129F99A1B00B68B7F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCF029F99A1B00B68B7F /* HomeViewController.swift */; };
+		BAD1FCF329F99A3900B68B7F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCF229F99A3900B68B7F /* HomeViewModel.swift */; };
+		BAD1FCFB29F99B0A00B68B7F /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCFA29F99B0A00B68B7F /* HttpResponseStatus.swift */; };
+		BAD1FCFD29F99B1600B68B7F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCFC29F99B1600B68B7F /* ApiError.swift */; };
+		BAD1FD0029F99B2000B68B7F /* ApiClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCFE29F99B2000B68B7F /* ApiClientService.swift */; };
+		BAD1FD0129F99B2000B68B7F /* ApiClientServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FCFF29F99B2000B68B7F /* ApiClientServiceImp.swift */; };
+		BAD1FD0329F99B3000B68B7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD0229F99B3000B68B7F /* Endpoint.swift */; };
+		BAD1FD1029F99C5500B68B7F /* HomeStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD0F29F99C5500B68B7F /* HomeStateController.swift */; };
+		BAD1FD1329F99C7600B68B7F /* UserPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1229F99C7600B68B7F /* UserPermissionUseCase.swift */; };
+		BAD1FD1529F99C9800B68B7F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1429F99C9800B68B7F /* UIView+Constraints.swift */; };
+		BAD1FD1829F99CB000B68B7F /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1629F99CB000B68B7F /* MessageDisplayable.swift */; };
+		BAD1FD1929F99CB000B68B7F /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1729F99CB000B68B7F /* SpinnerDisplayable.swift */; };
+		BAD1FD1C29F99CC200B68B7F /* CameraServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1A29F99CC200B68B7F /* CameraServiceImp.swift */; };
+		BAD1FD1D29F99CC200B68B7F /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1B29F99CC200B68B7F /* CameraService.swift */; };
+		BAD1FD2029F99D0A00B68B7F /* ViewValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD1FD1F29F99D0A00B68B7F /* ViewValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCameraMessageDisplayable.swift; sourceTree = "<group>"; };
+		BA95245F29FC4F0A005D3CC0 /* DeviceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUseCase.swift; sourceTree = "<group>"; };
+		BA95246229FC4FB2005D3CC0 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
+		BA95246429FC4FF6005D3CC0 /* DeviceServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceServiceImp.swift; sourceTree = "<group>"; };
+		BAAFC8B729FAAB8700F991A5 /* ScannQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRViewController.swift; sourceTree = "<group>"; };
+		BAAFC8B929FAABA200F991A5 /* ScannQRStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRStateController.swift; sourceTree = "<group>"; };
+		BAAFC8BB29FAABB300F991A5 /* ScannQRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRViewModel.swift; sourceTree = "<group>"; };
+		BAAFC8BD29FAB7D100F991A5 /* ScannQRCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRCoordinator.swift; sourceTree = "<group>"; };
+		BAAFC8BF29FAB98D00F991A5 /* ScannQRFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannQRFactory.swift; sourceTree = "<group>"; };
 		BAD1FCBB29F9704700B68B7F /* QR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BAD1FCC229F9704700B68B7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAD1FCC729F9704800B68B7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAD1FCCA29F9704800B68B7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAD1FCCC29F9704800B68B7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAD1FCD729F9881300B68B7F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BAD1FCD929F9885D00B68B7F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		BAD1FCDC29F997AB00B68B7F /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		BAD1FCDF29F9981500B68B7F /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		BAD1FCF029F99A1B00B68B7F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BAD1FCF229F99A3900B68B7F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BAD1FCFA29F99B0A00B68B7F /* HttpResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
+		BAD1FCFC29F99B1600B68B7F /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		BAD1FCFE29F99B2000B68B7F /* ApiClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientService.swift; sourceTree = "<group>"; };
+		BAD1FCFF29F99B2000B68B7F /* ApiClientServiceImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImp.swift; sourceTree = "<group>"; };
+		BAD1FD0229F99B3000B68B7F /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		BAD1FD0F29F99C5500B68B7F /* HomeStateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeStateController.swift; sourceTree = "<group>"; };
+		BAD1FD1229F99C7600B68B7F /* UserPermissionUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPermissionUseCase.swift; sourceTree = "<group>"; };
+		BAD1FD1429F99C9800B68B7F /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		BAD1FD1629F99CB000B68B7F /* MessageDisplayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
+		BAD1FD1729F99CB000B68B7F /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
+		BAD1FD1A29F99CC200B68B7F /* CameraServiceImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraServiceImp.swift; sourceTree = "<group>"; };
+		BAD1FD1B29F99CC200B68B7F /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		BAD1FD1F29F99D0A00B68B7F /* ViewValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +91,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA95246129FC4FA1005D3CC0 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				BA95246229FC4FB2005D3CC0 /* DeviceService.swift */,
+				BA95246429FC4FF6005D3CC0 /* DeviceServiceImp.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		BAAFC8B029FAAB0F00F991A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAAFC8B929FAABA200F991A5 /* ScannQRStateController.swift */,
+				BAAFC8B729FAAB8700F991A5 /* ScannQRViewController.swift */,
+				BAAFC8BB29FAABB300F991A5 /* ScannQRViewModel.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAAFC8B129FAAB2B00F991A5 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		BAAFC8B229FAAB3600F991A5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BAAFC8B329FAAB3E00F991A5 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		BAAFC8B429FAAB4E00F991A5 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		BAAFC8B529FAAB5500F991A5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		BAD1FCB229F9704700B68B7F = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +164,364 @@
 		BAD1FCBD29F9704700B68B7F /* QR */ = {
 			isa = PBXGroup;
 			children = (
-				BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */,
-				BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */,
-				BAD1FCC229F9704700B68B7F /* ViewController.swift */,
-				BAD1FCC729F9704800B68B7F /* Assets.xcassets */,
-				BAD1FCC929F9704800B68B7F /* LaunchScreen.storyboard */,
+				BAD1FCD229F987C500B68B7F /* App */,
 				BAD1FCCC29F9704800B68B7F /* Info.plist */,
 			);
 			path = QR;
+			sourceTree = "<group>";
+		};
+		BAD1FCD229F987C500B68B7F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCF429F99A9200B68B7F /* Resources */,
+				BAD1FCF629F99AC600B68B7F /* Networking */,
+				BAD1FCF529F99AA600B68B7F /* Common */,
+				BAD1FCE329F9989100B68B7F /* ScreenModules */,
+				BAD1FCE129F9985B00B68B7F /* CompositionRoot */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BAD1FCD329F987CB00B68B7F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCD429F987D600B68B7F /* AppCoordinator */,
+				BAD1FCD529F987E100B68B7F /* CoordinatorScreen */,
+				BAD1FCD629F987F400B68B7F /* Utils */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BAD1FCD429F987D600B68B7F /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCD729F9881300B68B7F /* Coordinator.swift */,
+				BAD1FCD929F9885D00B68B7F /* AppCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		BAD1FCD529F987E100B68B7F /* CoordinatorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */,
+				BAAFC8BD29FAB7D100F991A5 /* ScannQRCoordinator.swift */,
+			);
+			path = CoordinatorScreen;
+			sourceTree = "<group>";
+		};
+		BAD1FCD629F987F400B68B7F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BAD1FCDB29F9978C00B68B7F /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCDC29F997AB00B68B7F /* AppFactory.swift */,
+				BAD1FCDF29F9981500B68B7F /* HomeFactory.swift */,
+				BAAFC8BF29FAB98D00F991A5 /* ScannQRFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		BAD1FCE129F9985B00B68B7F /* CompositionRoot */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCE229F9987200B68B7F /* System */,
+				BAD1FCDB29F9978C00B68B7F /* Factories */,
+				BAD1FCD329F987CB00B68B7F /* Coordinator */,
+			);
+			path = CompositionRoot;
+			sourceTree = "<group>";
+		};
+		BAD1FCE229F9987200B68B7F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */,
+				BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		BAD1FCE329F9989100B68B7F /* ScreenModules */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCE429F9991E00B68B7F /* LaunchScreen */,
+				BAD1FD2129F9A16100B68B7F /* ScannQR */,
+				BAD1FCE529F9996300B68B7F /* Home */,
+			);
+			path = ScreenModules;
+			sourceTree = "<group>";
+		};
+		BAD1FCE429F9991E00B68B7F /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCC929F9704800B68B7F /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		BAD1FCE529F9996300B68B7F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCE629F9997000B68B7F /* Domain */,
+				BAD1FCE729F9997500B68B7F /* Data */,
+				BAD1FCE929F9999100B68B7F /* Presentation */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BAD1FCE629F9997000B68B7F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCEA29F999B600B68B7F /* UseCase */,
+				BAD1FCEB29F999C200B68B7F /* Entities */,
+				BAD1FCEC29F999CA00B68B7F /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BAD1FCE729F9997500B68B7F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCED29F999DF00B68B7F /* DTO */,
+				BAD1FCEE29F999EB00B68B7F /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BAD1FCE929F9999100B68B7F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCEF29F99A0100B68B7F /* Controller */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BAD1FCEA29F999B600B68B7F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		BAD1FCEB29F999C200B68B7F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BAD1FCEC29F999CA00B68B7F /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		BAD1FCED29F999DF00B68B7F /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		BAD1FCEE29F999EB00B68B7F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BAD1FCEF29F99A0100B68B7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD0F29F99C5500B68B7F /* HomeStateController.swift */,
+				BAD1FCF029F99A1B00B68B7F /* HomeViewController.swift */,
+				BAD1FCF229F99A3900B68B7F /* HomeViewModel.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAD1FCF429F99A9200B68B7F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCC729F9704800B68B7F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BAD1FCF529F99AA600B68B7F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD0B29F99C0500B68B7F /* Localize */,
+				BAD1FD0529F99B9100B68B7F /* Service */,
+				BAD1FD0629F99B9A00B68B7F /* Components */,
+				BAD1FD0729F99BA800B68B7F /* Utils */,
+				BAD1FD0829F99BBA00B68B7F /* Layer */,
+				BAD1FD0929F99BCA00B68B7F /* Constants */,
+				BAD1FD0A29F99BE600B68B7F /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BAD1FCF629F99AC600B68B7F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCF729F99AD900B68B7F /* StatusResponse */,
+				BAD1FCF829F99AE500B68B7F /* Errors */,
+				BAD1FCF929F99AEC00B68B7F /* ApiService */,
+				BAD1FD0229F99B3000B68B7F /* Endpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BAD1FCF729F99AD900B68B7F /* StatusResponse */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCFA29F99B0A00B68B7F /* HttpResponseStatus.swift */,
+			);
+			path = StatusResponse;
+			sourceTree = "<group>";
+		};
+		BAD1FCF829F99AE500B68B7F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCFC29F99B1600B68B7F /* ApiError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		BAD1FCF929F99AEC00B68B7F /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCFE29F99B2000B68B7F /* ApiClientService.swift */,
+				BAD1FCFF29F99B2000B68B7F /* ApiClientServiceImp.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		BAD1FD0529F99B9100B68B7F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BA95246129FC4FA1005D3CC0 /* Device */,
+				BAD1FD1E29F99CCA00B68B7F /* Camera */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BAD1FD0629F99B9A00B68B7F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */,
+				BAD1FD1629F99CB000B68B7F /* MessageDisplayable.swift */,
+				BAD1FD1729F99CB000B68B7F /* SpinnerDisplayable.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BAD1FD0729F99BA800B68B7F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BAD1FD0829F99BBA00B68B7F /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD0E29F99C3B00B68B7F /* Domain */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		BAD1FD0929F99BCA00B68B7F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD1F29F99D0A00B68B7F /* ViewValues.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BAD1FD0A29F99BE600B68B7F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD1429F99C9800B68B7F /* UIView+Constraints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BAD1FD0B29F99C0500B68B7F /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
+		BAD1FD0E29F99C3B00B68B7F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD1129F99C6800B68B7F /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BAD1FD1129F99C6800B68B7F /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD1229F99C7600B68B7F /* UserPermissionUseCase.swift */,
+				BA95245F29FC4F0A005D3CC0 /* DeviceUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		BAD1FD1E29F99CCA00B68B7F /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD1B29F99CC200B68B7F /* CameraService.swift */,
+				BAD1FD1A29F99CC200B68B7F /* CameraServiceImp.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		BAD1FD2129F9A16100B68B7F /* ScannQR */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FD2229F9A16A00B68B7F /* Domain */,
+				BAD1FD2329F9A3C300B68B7F /* Data */,
+				BAD1FD2429F9A3CA00B68B7F /* Presentation */,
+			);
+			path = ScannQR;
+			sourceTree = "<group>";
+		};
+		BAD1FD2229F9A16A00B68B7F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BAAFC8B129FAAB2B00F991A5 /* UseCase */,
+				BAAFC8B229FAAB3600F991A5 /* Entities */,
+				BAAFC8B329FAAB3E00F991A5 /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BAD1FD2329F9A3C300B68B7F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BAAFC8B529FAAB5500F991A5 /* Repositories */,
+				BAAFC8B429FAAB4E00F991A5 /* DTO */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BAD1FD2429F9A3CA00B68B7F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BAAFC8B029FAAB0F00F991A5 /* Controller */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +594,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAD1FCC329F9704700B68B7F /* ViewController.swift in Sources */,
+				BAD1FD1D29F99CC200B68B7F /* CameraService.swift in Sources */,
+				BAD1FD1929F99CB000B68B7F /* SpinnerDisplayable.swift in Sources */,
+				BAD1FD0029F99B2000B68B7F /* ApiClientService.swift in Sources */,
+				BAD1FD1029F99C5500B68B7F /* HomeStateController.swift in Sources */,
+				BAD1FCDA29F9885D00B68B7F /* AppCoordinator.swift in Sources */,
 				BAD1FCBF29F9704700B68B7F /* AppDelegate.swift in Sources */,
+				BAAFC8C029FAB98D00F991A5 /* ScannQRFactory.swift in Sources */,
+				BAD1FD0329F99B3000B68B7F /* Endpoint.swift in Sources */,
 				BAD1FCC129F9704700B68B7F /* SceneDelegate.swift in Sources */,
+				BAD1FD0129F99B2000B68B7F /* ApiClientServiceImp.swift in Sources */,
+				BAD1FCFD29F99B1600B68B7F /* ApiError.swift in Sources */,
+				BAAFC8BC29FAABB300F991A5 /* ScannQRViewModel.swift in Sources */,
+				BAAFC8BA29FAABA200F991A5 /* ScannQRStateController.swift in Sources */,
+				BAD1FCF329F99A3900B68B7F /* HomeViewModel.swift in Sources */,
+				BAD1FD1829F99CB000B68B7F /* MessageDisplayable.swift in Sources */,
+				BAD1FCD829F9881300B68B7F /* Coordinator.swift in Sources */,
+				BAD1FD1C29F99CC200B68B7F /* CameraServiceImp.swift in Sources */,
+				BAD1FD2029F99D0A00B68B7F /* ViewValues.swift in Sources */,
+				BA95246529FC4FF6005D3CC0 /* DeviceServiceImp.swift in Sources */,
+				BA95246029FC4F0A005D3CC0 /* DeviceUseCase.swift in Sources */,
+				BAAFC8BE29FAB7D100F991A5 /* ScannQRCoordinator.swift in Sources */,
+				BAD1FCFB29F99B0A00B68B7F /* HttpResponseStatus.swift in Sources */,
+				BAAFC8B829FAAB8700F991A5 /* ScannQRViewController.swift in Sources */,
+				BAD1FCDD29F997AB00B68B7F /* AppFactory.swift in Sources */,
+				BAD1FCF129F99A1B00B68B7F /* HomeViewController.swift in Sources */,
+				BAD1FCE029F9981500B68B7F /* HomeFactory.swift in Sources */,
+				BAD1FD1329F99C7600B68B7F /* UserPermissionUseCase.swift in Sources */,
+				BAD1FD1529F99C9800B68B7F /* UIView+Constraints.swift in Sources */,
+				BA95245E29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift in Sources */,
+				BA836A8029F9BD0C0048B177 /* HomeCoordinator.swift in Sources */,
+				BA95246329FC4FB2005D3CC0 /* DeviceService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +766,7 @@
 				DEVELOPMENT_TEAM = KZ7KQ2PBS3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QR/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permiso para camara scanner";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -307,6 +796,7 @@
 				DEVELOPMENT_TEAM = KZ7KQ2PBS3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QR/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permiso para camara scanner";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
