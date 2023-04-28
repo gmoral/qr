@@ -22,7 +22,7 @@ extension AccessCameraMessageDisplayable where Self: UIViewController {
             preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancelar",
-                                     style: .default,
+                                     style: .cancel,
                                      handler: {(action: UIAlertAction!) in
             self.denid()
         })

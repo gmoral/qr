@@ -18,9 +18,11 @@ struct ScannQRFactoryImp: ScannQRFactory {
         
         let cameraService = CameraServiceImp()
         let userPermissionUseCase = UserPermissionUseCaseImp(cameraService: cameraService)
+        let deviceService = DeviceServiceImp()
+        let deviceUseCase = DeviceUseCaseImp(deviceService: deviceService)
         let state = PassthroughSubject<ScannQRStateController, Never>()
         
-        let scannQRViewModel = ScannQRViewModelImp(state: state, userPermissionUseCase: userPermissionUseCase)
+        let scannQRViewModel = ScannQRViewModelImp(state: state, userPermissionUseCase: userPermissionUseCase, deviceUseCase: deviceUseCase)
         let scannQRViewController = ScannQRViewController(viewModel: scannQRViewModel, coordinator: coordinator)
         
         return scannQRViewController

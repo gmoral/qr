@@ -12,18 +12,21 @@ protocol ScannQRViewModel {
     var state: PassthroughSubject<ScannQRStateController, Never> { get }
     func viewDidLoad()
     func requestCameraAccess()
+    func openSettings()
 }
 
 final class ScannQRViewModelImp: ScannQRViewModel {
     
     var state: PassthroughSubject<ScannQRStateController, Never>
     let userPermissionUseCase: UserPermissionUseCase
+    let deviceUseCase: DeviceUseCase
     
     // MARK: CONSTRUCTOR
     
-    init(state: PassthroughSubject<ScannQRStateController, Never>, userPermissionUseCase: UserPermissionUseCase) {
+    init(state: PassthroughSubject<ScannQRStateController, Never>, userPermissionUseCase: UserPermissionUseCase, deviceUseCase: DeviceUseCase) {
         self.state = state
         self.userPermissionUseCase = userPermissionUseCase
+        self.deviceUseCase = deviceUseCase
     }
     
     // MARK: CUSTOM
@@ -42,15 +45,15 @@ final class ScannQRViewModelImp: ScannQRViewModel {
                     let authorization = await userPermissionUseCase.requestAuthorization()
                     switch authorization {
                         case .notDetermined:
-                        state.send(.notDetermined)
+                            state.send(.notDetermined)
                         case .restricted:
-                        state.send(.restricted)
+                            state.send(.restricted)
                         case .denied:
-                        state.send(.end)
+                            state.send(.end)
                        case .authorized:
-                        state.send(.authorized)
+                            state.send(.authorized)
                        @unknown default:
-                        state.send(.notDetermined)
+                            state.send(.notDetermined)
                     }
                 case .restricted:
                     state.send(.restricted)
@@ -62,5 +65,9 @@ final class ScannQRViewModelImp: ScannQRViewModel {
                     state.send(.notDetermined)
             }
         }
+    }
+    
+    func openSettings() {
+        deviceUseCase.requestOpenSettings()
     }
 }

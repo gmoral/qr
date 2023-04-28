@@ -15,13 +15,11 @@ protocol ScannQRViewControllerCoordinator {
 class ScannQRViewController: UIViewController {
     
     // MARK: PROPERTY
-    
     private let viewModel: ScannQRViewModel
     private var cancellable = Set<AnyCancellable>()
     private var coordinator: ScannQRViewControllerCoordinator
     
     // MARK: CUSTOM VIEW
-    
     let videoView: UIView = {
         
         let view = UIView()
@@ -152,14 +150,16 @@ class ScannQRViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureView()
+        stateController()
+        viewModel.viewDidLoad()
+    }
+    
+    func setupView() {
         buildViewHierarchy()
         setupConstraints()
         configureView()
         setupTouchEvents()
-        
-        stateController()
-        viewModel.viewDidLoad()
     }
     
     // MARK: CUSTOM
@@ -186,7 +186,7 @@ class ScannQRViewController: UIViewController {
     }
     
     private func configureView() {
-        self.view.backgroundColor = .orange
+        self.view.backgroundColor = .white
     }
     
     private func setupTouchEvents() {
@@ -214,6 +214,7 @@ class ScannQRViewController: UIViewController {
                         self.presentAlert(message: error, title: "Error")
                     case .authorized:
                         print("authorized")
+                        self.setupView()
                     case .denied:
                         print("denid")
                         self.presentAccessCamera(message: "Galicia no tiene acceso a la cámara, para escanear el QR. Para habilitar el acceso, ingresa a la Configuración y habilita la cámara", title: "")
@@ -241,5 +242,6 @@ extension ScannQRViewController: AccessCameraMessageDisplayable {
     
     func authorized() {
         self.coordinator.popViewController()
+        viewModel.openSettings()
     }
 }
