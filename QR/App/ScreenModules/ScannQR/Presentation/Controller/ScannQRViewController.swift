@@ -223,6 +223,7 @@ class ScannQRViewController: UIViewController {
                         print("restricted")
                     case .end:
                         print("end")
+                        denid()
                 }
         }.store(in: &cancellable)
     }

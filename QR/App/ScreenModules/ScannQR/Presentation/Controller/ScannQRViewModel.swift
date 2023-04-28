@@ -35,11 +35,23 @@ final class ScannQRViewModelImp: ScannQRViewModel {
     func requestCameraAccess() {
         Task {
             
-            let avAuthorizationStatus = await userPermissionUseCase.requestCameraAccess()
+            let avAuthorizationStatus = await userPermissionUseCase.requestAuthorizationStatus()
             
             switch avAuthorizationStatus {
                 case .notDetermined:
-                    state.send(.notDetermined)
+                    let authorization = await userPermissionUseCase.requestAuthorization()
+                    switch authorization {
+                        case .notDetermined:
+                        state.send(.notDetermined)
+                        case .restricted:
+                        state.send(.restricted)
+                        case .denied:
+                        state.send(.end)
+                       case .authorized:
+                        state.send(.authorized)
+                       @unknown default:
+                        state.send(.notDetermined)
+                    }
                 case .restricted:
                     state.send(.restricted)
                 case .denied:

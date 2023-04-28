@@ -25,15 +25,11 @@ struct CameraServiceImp: CameraService{
         
     var isAuthorized: AVAuthorizationStatus {
         get async {
-            var status = AVCaptureDevice.authorizationStatus(for: .video)
+            var status = AVAuthorizationStatus.denied
             
             var  authorized = false
             
-            if status == .notDetermined {
-                authorized = await AVCaptureDevice.requestAccess(for: .video)
-            } else {
-                return status
-            }
+            authorized = await AVCaptureDevice.requestAccess(for: .video)
             
             if authorized {
                 status = .authorized
@@ -49,4 +45,7 @@ struct CameraServiceImp: CameraService{
         return await isAuthorized
     }
     
+    func requestAuthorizationStatus() async -> AVAuthorizationStatus {
+        return AVCaptureDevice.authorizationStatus(for: .video)
+    }
 }
