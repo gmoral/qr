@@ -216,7 +216,7 @@ class ScannQRViewController: UIViewController {
                         print("authorized")
                     case .denied:
                         print("denid")
-                        self.coordinator.popViewController()
+                        self.presentAccessCamera(message: "Galicia no tiene acceso a la cámara, para escanear el QR. Para habilitar el acceso, ingresa a la Configuración y habilita la cámara", title: "")
                     case .notDetermined:
                         print("notDetermined")
                     case .restricted:
@@ -231,3 +231,14 @@ class ScannQRViewController: UIViewController {
 extension ScannQRViewController: SpinnerDisplayable { }
 
 extension ScannQRViewController: MessageDisplayable { }
+
+extension ScannQRViewController: AccessCameraMessageDisplayable {
+    
+    func denid() {
+        self.coordinator.popViewController()
+    }
+    
+    func authorized() {
+        self.coordinator.popViewController()
+    }
+}
