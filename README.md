@@ -33,7 +33,9 @@ Each tier represents general areas of responsibility of components and the stric
 
 [Dependency Injection Principles, Practices, and Patterns (by Mark Seemann, Steven van Deursen)](https://github.com/gmoral/Books/blob/master/Dependency%20Injection%20-%20Principles%20Practices%20and%20Patterns%20-%20Steven%20van%20Deursen.epub)
 
-https://github.com/gmoral/Books/blob/master/%5BO%60Reilly.%20Head%20First%5D%20-%20Head%20First%20Design%20Patterns%20-%20%5BFreeman%5D.pdf
+[Head First Design Patterns: A Brain-Friendly Guide First Edition (by Eric Freeman, Bert Bates, Kathy Sierra, Elisabeth Robson)](https://github.com/gmoral/Books/blob/master/%5BO%60Reilly.%20Head%20First%5D%20-%20Head%20First%20Design%20Patterns%20-%20%5BFreeman%5D.pdf)
+
+
 
 
 
