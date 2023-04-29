@@ -36,6 +36,4 @@ Each tier represents general areas of responsibility of components and the stric
 [Head First Design Patterns: A Brain-Friendly Guide First Edition (by Eric Freeman, Bert Bates, Kathy Sierra, Elisabeth Robson)](https://github.com/gmoral/Books/blob/master/%5BO%60Reilly.%20Head%20First%5D%20-%20Head%20First%20Design%20Patterns%20-%20%5BFreeman%5D.pdf)
 
 
-
-
-
+[Object-Oriented Software Engineering: A Use Case Driven Approach (by Ivar Jacobson)](https://www.amazon.com/Object-Oriented-Software-Engineering-Approach/dp/0201544350/ref=sr_1_1?crid=1HIMEP55YP51Z&keywords=ivar+Jacobson&qid=1682786667&sprefix=ivar+jacobson%2Caps%2C219&sr=8-1&ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513d670b6bc)
