@@ -12,3 +12,25 @@ The color coding in the following diagrams adheres to the colors used in this pu
 ![Class](./README_files/clean_architecture.svg?raw=true "Clean architecture")
 
 Each tier represents general areas of responsibility of components and the strict direction of their dependencies going from concrete volatile blue components down to the most abstract and stable yellow components. The outer layers know about any inner layers but not vice versa.
+
+## App Screen Flow
+
+![Class](./README_files/app_screen_flow.svg?raw=true "App Screen Flow")
+
+## Root Composition
+
+![Class](./README_files/root_composition.svg?raw=true "Root Composition")
+
+## Scann QR Module
+
+![Class](./README_files/scann_qr_module.svg?raw=true "Scann QR Module")
+
+## Reference
+
+https://github.com/gmoral/Books/blob/master/Clean%20Architecture%20A%20Craftsman's%20Guide%20to%20-%20Robert%20C.%20Martin.epub
+
+https://github.com/gmoral/Books/blob/master/Domain%20Driven%20Design%20Tackling%20Complexity%20in%20the%20Heart%20of%20Software%20-%20Eric%20Evans.pdf
+
+https://github.com/gmoral/Books/blob/master/Dependency%20Injection%20-%20Principles%20Practices%20and%20Patterns%20-%20Steven%20van%20Deursen.epub
+
+https://github.com/gmoral/Books/blob/master/%5BO%60Reilly.%20Head%20First%5D%20-%20Head%20First%20Design%20Patterns%20-%20%5BFreeman%5D.pdf
