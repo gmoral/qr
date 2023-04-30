@@ -1,6 +1,3 @@
-# Overview
-It is an iOS application.
-
 # Architectural principles
 Two major sources of design principles are applied in this project:
 1. I follow the principles of [Domain-Driven Design (Eric Evans)](https://github.com/gmoral/Books/blob/master/Domain%20Driven%20Design%20Tackling%20Complexity%20in%20the%20Heart%20of%20Software%20-%20Eric%20Evans.pdf) which aims to to build software that is valuably involved in the activities of stakeholders. This is achieved through mutual understanding of those activities between the domain experts and the developers. This understanding is communicated through "ubiquitous" language - abstracted and disambiguated, evolving, and mutually agreed terminology that must be used "everywhere".
