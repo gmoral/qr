@@ -91,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3BDB1AF29FF214F000535FF /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				BAD1FCF629F99AC600B68B7F /* Networking */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		BA95246129FC4FA1005D3CC0 /* Device */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +181,8 @@
 		BAD1FCD229F987C500B68B7F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B3BDB1AF29FF214F000535FF /* Infrastructure */,
 				BAD1FCF429F99A9200B68B7F /* Resources */,
-				BAD1FCF629F99AC600B68B7F /* Networking */,
 				BAD1FCF529F99AA600B68B7F /* Common */,
 				BAD1FCE329F9989100B68B7F /* ScreenModules */,
 				BAD1FCE129F9985B00B68B7F /* CompositionRoot */,
