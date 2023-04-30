@@ -29,7 +29,7 @@ Each tier represents general areas of responsibility of components and the stric
 
 [The Clean Code Blog (by Robert C. Martin (Uncle Bob))](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
-[Clean Architecture: A Craftsman's Guide to Software Structure and Design (by Robert C. Martin (Uncle Bob)](https://github.com/gmoral/Books/blob/master/Clean%20Architecture%20A%20Craftsman's%20Guide%20to%20-%20Robert%20C.%20Martin.epub)
+[Clean Architecture: A Craftsman's Guide to Software Structure and Design (by Robert C. Martin (Uncle Bob))](https://github.com/gmoral/Books/blob/master/Clean%20Architecture%20A%20Craftsman's%20Guide%20to%20-%20Robert%20C.%20Martin.epub)
 
 [Domain-Driven Design (Eric Evans)](https://github.com/gmoral/Books/blob/master/Domain%20Driven%20Design%20Tackling%20Complexity%20in%20the%20Heart%20of%20Software%20-%20Eric%20Evans.pdf)
 
