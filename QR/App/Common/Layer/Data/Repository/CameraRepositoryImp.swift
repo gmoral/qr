@@ -12,27 +12,24 @@ import UIKit
 struct CameraRepositoryImp: CameraRepository {
 
     private let cameraService: CameraService
-    private let mapperAuthorizationResponse: MapperBase<AuthorizationEntity, AVAuthorizationStatus>
     private let mapperAuthorizationStatusResponse: MapperBase<AuthorizationEntity, AVAuthorizationStatus>
+    private let mapperAuthorizationResponse: MapperBase<AuthorizationEntity, AVAuthorizationStatus>
 
-    init(cameraService: CameraService, mapperAuthorizationResponse: MapperBase<AuthorizationEntity, AVAuthorizationStatus>, mapperAuthorizationStatusResponse: MapperBase<AuthorizationEntity, AVAuthorizationStatus>) {
+    init(cameraService: CameraService, mapperAuthorizationStatusResponse: MapperBase<AuthorizationEntity, AVAuthorizationStatus>, mapperAuthorizationResponse: MapperBase<AuthorizationEntity, AVAuthorizationStatus>) {
         self.cameraService = cameraService
-        self.mapperAuthorizationResponse = mapperAuthorizationResponse
         self.mapperAuthorizationStatusResponse = mapperAuthorizationStatusResponse
-
+        self.mapperAuthorizationResponse = mapperAuthorizationResponse
     }
 
     func getAuthorizationStatus() async -> AuthorizationEntity {
 
         let status = await cameraService.requestAuthorizationStatus()
-
         return mapperAuthorizationStatusResponse.mapToEntity(model: status)
     }
 
     func getAuthorization() async -> AuthorizationEntity {
 
         let status = await cameraService.requestAuthorization()
-
         return mapperAuthorizationResponse.mapToEntity(model: status)
     }
 }

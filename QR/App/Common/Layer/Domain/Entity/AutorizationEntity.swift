@@ -8,15 +8,10 @@
 import Foundation
 
 public enum AuthorizationStatus : Int {
-
     case notDetermined = 0
-
     case restricted = 1
-
     case denied = 2
-
     case authorized = 3
-
     case needChangeSettings = 4
 }
 
