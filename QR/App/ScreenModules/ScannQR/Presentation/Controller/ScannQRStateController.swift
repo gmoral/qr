@@ -14,6 +14,7 @@ enum ScannQRStateController {
     case loading
     case authorized
     case denied
+    case needChangeSettings
     case notDetermined
     case restricted
     case end

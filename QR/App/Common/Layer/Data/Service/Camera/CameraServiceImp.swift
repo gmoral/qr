@@ -9,18 +9,6 @@ import Foundation
 import AVFoundation
 import UIKit
 
-actor AuthorizationActor {
-    private var status = AVAuthorizationStatus.denied
-    
-    func setStatus(newStatus: AVAuthorizationStatus) {
-        status = newStatus
-    }
-    
-    func getStatus()->AVAuthorizationStatus {
-        return status
-    }
-}
-
 struct CameraServiceImp: CameraService{
         
     var isAuthorized: AVAuthorizationStatus {

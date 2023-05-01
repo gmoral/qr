@@ -215,9 +215,12 @@ class ScannQRViewController: UIViewController {
                     case .authorized:
                         print("authorized")
                         self.setupView()
-                    case .denied:
-                        print("denid")
+                    case .needChangeSettings:
+                        print("needChangeSettings")
                         self.presentAccessCamera(message: "Galicia no tiene acceso a la cámara, para escanear el QR. Para habilitar el acceso, ingresa a la Configuración y habilita la cámara", title: "")
+                    case .denied:
+                        print("denied")
+                        denid()
                     case .notDetermined:
                         print("notDetermined")
                     case .restricted:

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34BC16029FFE1A800C61DE1 /* CameraRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC15F29FFE1A800C61DE1 /* CameraRepository.swift */; };
+		B34BC16229FFE1CC00C61DE1 /* CameraRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16129FFE1CC00C61DE1 /* CameraRepositoryImp.swift */; };
+		B34BC16429FFE26000C61DE1 /* AutorizationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16329FFE26000C61DE1 /* AutorizationEntity.swift */; };
+		B34BC16629FFE76100C61DE1 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16529FFE76100C61DE1 /* Mapper.swift */; };
+		B34BC16829FFE93500C61DE1 /* CameraAuthorizationMapperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16729FFE93500C61DE1 /* CameraAuthorizationMapperData.swift */; };
+		B34BC16A29FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16929FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift */; };
 		BA836A8029F9BD0C0048B177 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */; };
 		BA95245E29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */; };
 		BA95246029FC4F0A005D3CC0 /* DeviceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95245F29FC4F0A005D3CC0 /* DeviceUseCase.swift */; };
@@ -43,6 +49,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B34BC15F29FFE1A800C61DE1 /* CameraRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRepository.swift; sourceTree = "<group>"; };
+		B34BC16129FFE1CC00C61DE1 /* CameraRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRepositoryImp.swift; sourceTree = "<group>"; };
+		B34BC16329FFE26000C61DE1 /* AutorizationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationEntity.swift; sourceTree = "<group>"; };
+		B34BC16529FFE76100C61DE1 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		B34BC16729FFE93500C61DE1 /* CameraAuthorizationMapperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAuthorizationMapperData.swift; sourceTree = "<group>"; };
+		B34BC16929FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAuthorizationStatusMapperData.swift; sourceTree = "<group>"; };
 		BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCameraMessageDisplayable.swift; sourceTree = "<group>"; };
 		BA95245F29FC4F0A005D3CC0 /* DeviceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUseCase.swift; sourceTree = "<group>"; };
@@ -91,6 +103,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B34BC15A29FFD86300C61DE1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B34BC15F29FFE1A800C61DE1 /* CameraRepository.swift */,
+				B34BC16129FFE1CC00C61DE1 /* CameraRepositoryImp.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B34BC15B29FFD86E00C61DE1 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				B34BC16529FFE76100C61DE1 /* Mapper.swift */,
+				B34BC16729FFE93500C61DE1 /* CameraAuthorizationMapperData.swift */,
+				B34BC16929FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		B34BC15C29FFD87700C61DE1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B34BC16329FFE26000C61DE1 /* AutorizationEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B34BC15D29FFD8BC00C61DE1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B34BC15A29FFD86300C61DE1 /* Repository */,
+				BAD1FD0529F99B9100B68B7F /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		B3BDB1AF29FF214F000535FF /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,11 +413,10 @@
 		BAD1FCF529F99AA600B68B7F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BAD1FD0829F99BBA00B68B7F /* Layer */,
 				BAD1FD0B29F99C0500B68B7F /* Localize */,
-				BAD1FD0529F99B9100B68B7F /* Service */,
 				BAD1FD0629F99B9A00B68B7F /* Components */,
 				BAD1FD0729F99BA800B68B7F /* Utils */,
-				BAD1FD0829F99BBA00B68B7F /* Layer */,
 				BAD1FD0929F99BCA00B68B7F /* Constants */,
 				BAD1FD0A29F99BE600B68B7F /* Extensions */,
 			);
@@ -441,6 +488,7 @@
 		BAD1FD0829F99BBA00B68B7F /* Layer */ = {
 			isa = PBXGroup;
 			children = (
+				B34BC15D29FFD8BC00C61DE1 /* Data */,
 				BAD1FD0E29F99C3B00B68B7F /* Domain */,
 			);
 			path = Layer;
@@ -472,6 +520,8 @@
 		BAD1FD0E29F99C3B00B68B7F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B34BC15B29FFD86E00C61DE1 /* Mapper */,
+				B34BC15C29FFD87700C61DE1 /* Entity */,
 				BAD1FD1129F99C6800B68B7F /* UseCase */,
 			);
 			path = Domain;
@@ -606,9 +656,14 @@
 				BAD1FD1929F99CB000B68B7F /* SpinnerDisplayable.swift in Sources */,
 				BAD1FD0029F99B2000B68B7F /* ApiClientService.swift in Sources */,
 				BAD1FD1029F99C5500B68B7F /* HomeStateController.swift in Sources */,
+				B34BC16829FFE93500C61DE1 /* CameraAuthorizationMapperData.swift in Sources */,
+				B34BC16229FFE1CC00C61DE1 /* CameraRepositoryImp.swift in Sources */,
 				BAD1FCDA29F9885D00B68B7F /* AppCoordinator.swift in Sources */,
 				BAD1FCBF29F9704700B68B7F /* AppDelegate.swift in Sources */,
+				B34BC16429FFE26000C61DE1 /* AutorizationEntity.swift in Sources */,
 				BAAFC8C029FAB98D00F991A5 /* ScannQRFactory.swift in Sources */,
+				B34BC16629FFE76100C61DE1 /* Mapper.swift in Sources */,
+				B34BC16A29FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift in Sources */,
 				BAD1FD0329F99B3000B68B7F /* Endpoint.swift in Sources */,
 				BAD1FCC129F9704700B68B7F /* SceneDelegate.swift in Sources */,
 				BAD1FD0129F99B2000B68B7F /* ApiClientServiceImp.swift in Sources */,
@@ -628,6 +683,7 @@
 				BAD1FCDD29F997AB00B68B7F /* AppFactory.swift in Sources */,
 				BAD1FCF129F99A1B00B68B7F /* HomeViewController.swift in Sources */,
 				BAD1FCE029F9981500B68B7F /* HomeFactory.swift in Sources */,
+				B34BC16029FFE1A800C61DE1 /* CameraRepository.swift in Sources */,
 				BAD1FD1329F99C7600B68B7F /* UserPermissionUseCase.swift in Sources */,
 				BAD1FD1529F99C9800B68B7F /* UIView+Constraints.swift in Sources */,
 				BA95245E29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift in Sources */,

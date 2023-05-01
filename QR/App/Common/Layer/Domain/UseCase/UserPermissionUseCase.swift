@@ -10,23 +10,23 @@ import AVFoundation
 import UIKit
 
 protocol UserPermissionUseCase {
-    func requestAuthorization()  async -> AVAuthorizationStatus
-    func requestAuthorizationStatus()  async -> AVAuthorizationStatus
+    func requestAuthorization()  async -> AuthorizationEntity
+    func requestAuthorizationStatus()  async -> AuthorizationEntity
 }
 
 struct UserPermissionUseCaseImp: UserPermissionUseCase {
     
-    private let cameraService: CameraService
+    private let cameraRepository: CameraRepository
     
-    init(cameraService: CameraService) {
-        self.cameraService = cameraService
+    init(cameraRepository: CameraRepository) {
+        self.cameraRepository = cameraRepository
     }
     
-    func requestAuthorization()  async -> AVAuthorizationStatus {
-        return await cameraService.requestAuthorization()
+    func requestAuthorization()  async -> AuthorizationEntity {
+        return await cameraRepository.getAuthorization()
     }
     
-    func requestAuthorizationStatus()  async -> AVAuthorizationStatus {
-        return await cameraService.requestAuthorizationStatus()
+    func requestAuthorizationStatus()  async -> AuthorizationEntity {
+        return await cameraRepository.getAuthorizationStatus()
     }
 }

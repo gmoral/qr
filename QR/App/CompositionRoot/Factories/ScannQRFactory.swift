@@ -15,9 +15,12 @@ protocol ScannQRFactory {
 struct ScannQRFactoryImp: ScannQRFactory {
     
     func makeModule(coordinator: ScannQRViewControllerCoordinator) -> UIViewController {
-        
+
+        let mapperAuthorizationResponse = CameraAuthorizationMapperData()
+        let mapperAuthorizationStatusResponse = CameraAuthorizationStatusMapperData()
         let cameraService = CameraServiceImp()
-        let userPermissionUseCase = UserPermissionUseCaseImp(cameraService: cameraService)
+        let cameraRepository = CameraRepositoryImp(cameraService: cameraService, mapperAuthorizationResponse: mapperAuthorizationResponse, mapperAuthorizationStatusResponse: mapperAuthorizationStatusResponse)
+        let userPermissionUseCase = UserPermissionUseCaseImp(cameraRepository: cameraRepository)
         let deviceService = DeviceServiceImp()
         let deviceUseCase = DeviceUseCaseImp(deviceService: deviceService)
         let state = PassthroughSubject<ScannQRStateController, Never>()
