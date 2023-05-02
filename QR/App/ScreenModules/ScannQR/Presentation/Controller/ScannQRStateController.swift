@@ -17,5 +17,8 @@ enum ScannQRStateController {
     case needChangeSettings
     case notDetermined
     case restricted
+    case resetScann
+    case scannQRfailed
+    case scannQRSuccess
     case end
 }

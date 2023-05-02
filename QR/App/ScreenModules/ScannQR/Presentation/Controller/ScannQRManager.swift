@@ -10,8 +10,8 @@ import AVFoundation
 import UIKit
 
 protocol ScannQRManagerDelegate: AnyObject {
-    func failed()
-    func found(code: String)
+    func scannQRfailed()
+    func scannQRSuccess(code: String)
 }
 
 class ScannQRManager: NSObject {
@@ -115,7 +115,7 @@ extension ScannQRManager : AVCaptureMetadataOutputObjectsDelegate {
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: stringValue)
-            self.delegate?.found(code: stringValue)
+            self.delegate?.scannQRSuccess(code: stringValue)
         }
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 protocol ScannQRViewModel {
     var state: PassthroughSubject<ScannQRStateController, Never> { get }
+    var qrCode: String { get }
     func viewDidLoad()
     func requestCameraAccess()
     func openSettings()
@@ -19,6 +20,7 @@ protocol ScannQRViewModel {
 final class ScannQRViewModelImp: ScannQRViewModel, ScannQRManagerDelegate {
     
     var state: PassthroughSubject<ScannQRStateController, Never>
+    var qrCode = ""
     let userPermissionUseCase: UserPermissionUseCase
     let deviceUseCase: DeviceUseCase
     public let scannQRManager: ScannQRManager
@@ -69,19 +71,22 @@ final class ScannQRViewModelImp: ScannQRViewModel, ScannQRManagerDelegate {
         deviceUseCase.requestOpenSettings()
     }
     
-    // MARK: CUSTOM
-    
-    func failed() {
-        //TDOD
-        print("Fail")
-    }
-    
-    func found(code: String) {
-        //TDOD
-        print(">> Found <<")
-    }
-    
     func scannQR() -> ScannQRManager {
         return scannQRManager
     }
+    
+    // MARK: ScannQRManagerDelegate
+    
+    func scannQRfailed() {
+        print("Fail")
+        state.send(.scannQRfailed)
+    }
+    
+    func scannQRSuccess(code: String) {
+        self.qrCode = code
+        state.send(.scannQRSuccess)
+    }
+    
 }
+
+

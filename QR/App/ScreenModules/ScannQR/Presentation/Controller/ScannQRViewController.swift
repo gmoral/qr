@@ -231,6 +231,12 @@ class ScannQRViewController: UIViewController {
                         print("notDetermined")
                     case .restricted:
                         print("restricted")
+                    case .resetScann:
+                        print("resetScann")
+                    case .scannQRfailed:
+                        print(">> scannQRfailed <<")
+                    case .scannQRSuccess:
+                        print(viewModel.qrCode)
                     case .end:
                         print("end")
                         denid()
