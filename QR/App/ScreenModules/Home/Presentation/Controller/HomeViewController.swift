@@ -56,7 +56,7 @@ class HomeViewController: UIViewController {
         configureView()
         setupTouchEvents()
         
-        stateController()
+        controllerStates()
         viewModel.viewDidLoad()
     }
     
@@ -87,9 +87,9 @@ class HomeViewController: UIViewController {
         qrButton.addTarget(self, action: #selector(redirectQR), for: .touchUpInside)
     }
     
-    // MARK: STATE MACHINE
+    // MARK: CONTROLLER MACHINE STATES
     
-    private func stateController() {
+    private func controllerStates() {
         viewModel
             .state
             .receive(on: RunLoop.main)

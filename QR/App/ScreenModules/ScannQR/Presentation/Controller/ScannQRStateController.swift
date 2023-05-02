@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ScannQRStateController {
+enum ScannQRControllerStates {
     case start
     case success
     case fail(error: String)

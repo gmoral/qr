@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 protocol ScannQRViewModel {
-    var state: PassthroughSubject<ScannQRStateController, Never> { get }
+    var state: PassthroughSubject<ScannQRControllerStates, Never> { get }
     func viewDidLoad()
     func requestCameraAccess()
     func openSettings()
@@ -17,13 +17,13 @@ protocol ScannQRViewModel {
 
 final class ScannQRViewModelImp: ScannQRViewModel {
     
-    var state: PassthroughSubject<ScannQRStateController, Never>
+    var state: PassthroughSubject<ScannQRControllerStates, Never>
     let userPermissionUseCase: UserPermissionUseCase
     let deviceUseCase: DeviceUseCase
     
     // MARK: CONSTRUCTOR
     
-    init(state: PassthroughSubject<ScannQRStateController, Never>, userPermissionUseCase: UserPermissionUseCase, deviceUseCase: DeviceUseCase) {
+    init(state: PassthroughSubject<ScannQRControllerStates, Never>, userPermissionUseCase: UserPermissionUseCase, deviceUseCase: DeviceUseCase) {
         self.state = state
         self.userPermissionUseCase = userPermissionUseCase
         self.deviceUseCase = deviceUseCase

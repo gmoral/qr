@@ -146,12 +146,12 @@ class ScannQRViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: VIEW CICLE
+    // MARK: VIEW CIRCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        stateController()
+        controllerStates()
         viewModel.viewDidLoad()
     }
     
@@ -193,9 +193,9 @@ class ScannQRViewController: UIViewController {
         // ToDO
     }
     
-    // MARK: STATE MACHINE
+    // MARK: CONTROLLER MACHINE STATES
     
-    private func stateController() {
+    private func controllerStates() {
         viewModel
             .state
             .receive(on: RunLoop.main)

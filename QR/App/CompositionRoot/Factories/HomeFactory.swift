@@ -20,9 +20,9 @@ struct HomeFactoryImp: HomeFactory {
         let mapperAuthorizationResponse = CameraAuthorizationMapperData()
         let mapperAuthorizationStatusResponse = CameraAuthorizationStatusMapperData()
         let cameraService = CameraServiceImp()
-        let cameraRepository = CameraRepositoryImp(cameraService: cameraService, mapperAuthorizationResponse: mapperAuthorizationResponse, mapperAuthorizationStatusResponse: mapperAuthorizationStatusResponse)
+        let cameraRepository = CameraRepositoryImp(cameraService: cameraService, mapperAuthorizationStatusResponse: mapperAuthorizationStatusResponse, mapperAuthorizationResponse: mapperAuthorizationResponse)
         let userPermissionUseCase = UserPermissionUseCaseImp(cameraRepository: cameraRepository)
-        let state = PassthroughSubject<HomeStateController, Never>()
+        let state = PassthroughSubject<HomeControllerStates, Never>()
         
         let homeViewModel = HomeViewModelImp(state: state, userPermissionUseCase: userPermissionUseCase)
         let homeViewController = HomeViewController(viewModel: homeViewModel, coordinator: coordinator)
