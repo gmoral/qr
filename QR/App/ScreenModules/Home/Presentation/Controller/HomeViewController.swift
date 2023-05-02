@@ -56,7 +56,7 @@ class HomeViewController: UIViewController {
         configureView()
         setupTouchEvents()
         
-        controllerStates()
+        stateController()
         viewModel.viewDidLoad()
     }
     
@@ -89,7 +89,7 @@ class HomeViewController: UIViewController {
     
     // MARK: CONTROLLER MACHINE STATES
     
-    private func controllerStates() {
+    private func stateController() {
         viewModel
             .state
             .receive(on: RunLoop.main)

@@ -151,7 +151,7 @@ class ScannQRViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        controllerStates()
+        stateController()
         viewModel.viewDidLoad()
     }
     
@@ -195,7 +195,7 @@ class ScannQRViewController: UIViewController {
     
     // MARK: CONTROLLER MACHINE STATES
     
-    private func controllerStates() {
+    private func stateController() {
         viewModel
             .state
             .receive(on: RunLoop.main)

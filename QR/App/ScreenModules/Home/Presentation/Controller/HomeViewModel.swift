@@ -9,18 +9,18 @@ import Combine
 import Foundation
 
 protocol HomeViewModel {
-    var state: PassthroughSubject<HomeControllerStates, Never> { get }
+    var state: PassthroughSubject<HomeStateController, Never> { get }
     func viewDidLoad()
 }
 
 final class HomeViewModelImp: HomeViewModel {
     
-    var state: PassthroughSubject<HomeControllerStates, Never>
+    var state: PassthroughSubject<HomeStateController, Never>
     let userPermissionUseCase: UserPermissionUseCase
     
     // MARK: CONSTRUCTOR
     
-    init(state: PassthroughSubject<HomeControllerStates, Never>, userPermissionUseCase: UserPermissionUseCase) {
+    init(state: PassthroughSubject<HomeStateController, Never>, userPermissionUseCase: UserPermissionUseCase) {
         self.state = state
         self.userPermissionUseCase = userPermissionUseCase
     }
