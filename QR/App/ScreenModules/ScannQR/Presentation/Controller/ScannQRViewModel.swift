@@ -13,20 +13,23 @@ protocol ScannQRViewModel {
     func viewDidLoad()
     func requestCameraAccess()
     func openSettings()
+    func scannQR() -> ScannQRManager
 }
 
-final class ScannQRViewModelImp: ScannQRViewModel {
+final class ScannQRViewModelImp: ScannQRViewModel, ScannQRManagerDelegate {
     
     var state: PassthroughSubject<ScannQRStateController, Never>
     let userPermissionUseCase: UserPermissionUseCase
     let deviceUseCase: DeviceUseCase
+    public let scannQRManager: ScannQRManager
     
     // MARK: CONSTRUCTOR
     
-    init(state: PassthroughSubject<ScannQRStateController, Never>, userPermissionUseCase: UserPermissionUseCase, deviceUseCase: DeviceUseCase) {
+    init(state: PassthroughSubject<ScannQRStateController, Never>, userPermissionUseCase: UserPermissionUseCase, deviceUseCase: DeviceUseCase, scannQRManager: ScannQRManager) {
         self.state = state
         self.userPermissionUseCase = userPermissionUseCase
         self.deviceUseCase = deviceUseCase
+        self.scannQRManager = scannQRManager
     }
     
     // MARK: CUSTOM
@@ -64,5 +67,21 @@ final class ScannQRViewModelImp: ScannQRViewModel {
     
     func openSettings() {
         deviceUseCase.requestOpenSettings()
+    }
+    
+    // MARK: CUSTOM
+    
+    func failed() {
+        //TDOD
+        print("Fail")
+    }
+    
+    func found(code: String) {
+        //TDOD
+        print(">> Found <<")
+    }
+    
+    func scannQR() -> ScannQRManager {
+        return scannQRManager
     }
 }

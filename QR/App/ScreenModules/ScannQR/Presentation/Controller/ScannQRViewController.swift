@@ -160,6 +160,7 @@ class ScannQRViewController: UIViewController {
         setupConstraints()
         configureView()
         setupTouchEvents()
+        
     }
     
     // MARK: CUSTOM
@@ -214,6 +215,11 @@ class ScannQRViewController: UIViewController {
                         self.presentAlert(message: error, title: "Error")
                     case .authorized:
                         print("authorized")
+                        
+                        let scannQR = viewModel.scannQR()
+                        scannQR.setup(rootVC: self)
+                        scannQR.startRunning()
+                        
                         self.setupView()
                     case .needChangeSettings:
                         print("needChangeSettings")
