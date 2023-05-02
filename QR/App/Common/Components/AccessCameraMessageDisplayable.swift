@@ -27,7 +27,7 @@ extension AccessCameraMessageDisplayable where Self: UIViewController {
             self.denid()
         })
         
-        let setupAction = UIAlertAction(title: "Configuración",
+        let setupAction = UIAlertAction(title: "Habilitar cámara",
                                      style: .default,
                                      handler: {(action: UIAlertAction!) in
                                         print(">> configuracion <<")
