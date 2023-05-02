@@ -95,8 +95,11 @@ class ScannQRManager: NSObject {
     }
     
     public func startRunning() {
-        if (captureSession?.isRunning == false) {
-            captureSession.startRunning()
+        if (self.captureSession?.isRunning == false) {
+            let backgroundQueue = DispatchQueue(label: "com.app.queue.qr", qos: .background)
+            backgroundQueue.async {
+                self.captureSession.startRunning()
+            }
         }
     }
 }
