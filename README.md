@@ -7,6 +7,7 @@ Two major sources of design principles are applied in this project:
 The color coding in the following diagrams adheres to the colors used in this public description of clean architecture. 
 
 ![Class](./README_files/CA.svg?raw=true "CA")
-![Class](./README_files/clean_architecture.svg?raw=true "Clean architecture")
+
+![clean_architecture](https://user-images.githubusercontent.com/805764/236639140-3e0e23fb-68bd-43a7-b3b7-6f92c32b3a32.svg)
 
 Each tier represents general areas of responsibility of components and the strict direction of their dependencies going from concrete volatile blue components down to the most abstract and stable yellow components. The outer layers know about any inner layers but not vice versa.
