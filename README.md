@@ -8,7 +8,6 @@ The color coding in the following diagrams adheres to the colors used in this pu
 
 ![Class](./README_files/CA.svg?raw=true "CA")
 
-![ScannQR-Clean Architecture drawio (1)](https://user-images.githubusercontent.com/805764/236639377-38c48ccc-3b30-4183-ac4e-81281c3b849f.svg)
-
+![ScannQR-Clean Architecture drawio (1)](https://user-images.githubusercontent.com/805764/236645183-18413051-68ed-403e-bf34-186d7eb8debe.svg)
 
 Each tier represents general areas of responsibility of components and the strict direction of their dependencies going from concrete volatile blue components down to the most abstract and stable yellow components. The outer layers know about any inner layers but not vice versa.
