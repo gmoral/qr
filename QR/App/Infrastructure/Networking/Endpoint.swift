@@ -8,5 +8,5 @@
 import Foundation
 
 struct Endpoint {
-    static let baseURl = "https://qrscann.mocklab.io/api"
+    static let baseURl = ""
 }
