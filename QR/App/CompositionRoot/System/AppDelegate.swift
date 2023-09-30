@@ -10,6 +10,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    weak var appWindow: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -26,6 +27,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
 
     }
-
 }
 
+extension AppDelegate {
+
+    static var shared: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+
+    var rootViewController: UIViewController {
+
+        return AppDelegate.shared.appWindow?.rootViewController as! UIViewController
+    }
+
+    func add(window: UIWindow) {
+        self.appWindow = window
+    }
+}

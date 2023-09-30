@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31F1A982AC49ED7000CFD79 /* TyCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F1A972AC49ED7000CFD79 /* TyCViewController.swift */; };
+		B31F1A9A2AC49F3C000CFD79 /* TyCStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F1A992AC49F3C000CFD79 /* TyCStateController.swift */; };
+		B31F1A9C2AC49F6E000CFD79 /* TyCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F1A9B2AC49F6E000CFD79 /* TyCViewModel.swift */; };
+		B324BEBD2AB5D2C100418417 /* UDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324BEBC2AB5D2C100418417 /* UDM.swift */; };
 		B34BC16029FFE1A800C61DE1 /* CameraRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC15F29FFE1A800C61DE1 /* CameraRepository.swift */; };
 		B34BC16229FFE1CC00C61DE1 /* CameraRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16129FFE1CC00C61DE1 /* CameraRepositoryImp.swift */; };
 		B34BC16429FFE26000C61DE1 /* AutorizationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16329FFE26000C61DE1 /* AutorizationEntity.swift */; };
 		B34BC16629FFE76100C61DE1 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16529FFE76100C61DE1 /* Mapper.swift */; };
 		B34BC16829FFE93500C61DE1 /* CameraAuthorizationMapperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16729FFE93500C61DE1 /* CameraAuthorizationMapperData.swift */; };
 		B34BC16A29FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16929FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift */; };
+		B3EBE65B2AB4D35A00788BD2 /* DAILog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBE65A2AB4D35A00788BD2 /* DAILog.swift */; };
+		B3EBE65D2AB4D56B00788BD2 /* DAIDateFormatterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBE65C2AB4D56B00788BD2 /* DAIDateFormatterFactory.swift */; };
 		BA8346C72A01458400A7E802 /* ScannQRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8346C62A01458400A7E802 /* ScannQRManager.swift */; };
 		BA836A8029F9BD0C0048B177 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */; };
 		BA95245E29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */; };
@@ -50,12 +56,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B31F1A972AC49ED7000CFD79 /* TyCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyCViewController.swift; sourceTree = "<group>"; };
+		B31F1A992AC49F3C000CFD79 /* TyCStateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyCStateController.swift; sourceTree = "<group>"; };
+		B31F1A9B2AC49F6E000CFD79 /* TyCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyCViewModel.swift; sourceTree = "<group>"; };
+		B324BEBC2AB5D2C100418417 /* UDM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDM.swift; sourceTree = "<group>"; };
 		B34BC15F29FFE1A800C61DE1 /* CameraRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRepository.swift; sourceTree = "<group>"; };
 		B34BC16129FFE1CC00C61DE1 /* CameraRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRepositoryImp.swift; sourceTree = "<group>"; };
 		B34BC16329FFE26000C61DE1 /* AutorizationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationEntity.swift; sourceTree = "<group>"; };
 		B34BC16529FFE76100C61DE1 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		B34BC16729FFE93500C61DE1 /* CameraAuthorizationMapperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAuthorizationMapperData.swift; sourceTree = "<group>"; };
 		B34BC16929FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAuthorizationStatusMapperData.swift; sourceTree = "<group>"; };
+		B3EBE65A2AB4D35A00788BD2 /* DAILog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAILog.swift; sourceTree = "<group>"; };
+		B3EBE65C2AB4D56B00788BD2 /* DAIDateFormatterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAIDateFormatterFactory.swift; sourceTree = "<group>"; };
 		BA8346C62A01458400A7E802 /* ScannQRManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannQRManager.swift; sourceTree = "<group>"; };
 		BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCameraMessageDisplayable.swift; sourceTree = "<group>"; };
@@ -105,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B31F1A962AC49EBC000CFD79 /* TyC */ = {
+			isa = PBXGroup;
+			children = (
+				B31F1A972AC49ED7000CFD79 /* TyCViewController.swift */,
+				B31F1A992AC49F3C000CFD79 /* TyCStateController.swift */,
+				B31F1A9B2AC49F6E000CFD79 /* TyCViewModel.swift */,
+			);
+			path = TyC;
+			sourceTree = "<group>";
+		};
 		B34BC15A29FFD86300C61DE1 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +245,7 @@
 		BAD1FCBD29F9704700B68B7F /* QR */ = {
 			isa = PBXGroup;
 			children = (
+				B31F1A962AC49EBC000CFD79 /* TyC */,
 				BAD1FCD229F987C500B68B7F /* App */,
 				BAD1FCCC29F9704800B68B7F /* Info.plist */,
 			);
@@ -299,6 +322,9 @@
 		BAD1FCE229F9987200B68B7F /* System */ = {
 			isa = PBXGroup;
 			children = (
+				B324BEBC2AB5D2C100418417 /* UDM.swift */,
+				B3EBE65C2AB4D56B00788BD2 /* DAIDateFormatterFactory.swift */,
+				B3EBE65A2AB4D35A00788BD2 /* DAILog.swift */,
 				BAD1FCBE29F9704700B68B7F /* AppDelegate.swift */,
 				BAD1FCC029F9704700B68B7F /* SceneDelegate.swift */,
 			);
@@ -660,6 +686,7 @@
 				BAD1FD0029F99B2000B68B7F /* ApiClientService.swift in Sources */,
 				BAD1FD1029F99C5500B68B7F /* HomeStateController.swift in Sources */,
 				B34BC16829FFE93500C61DE1 /* CameraAuthorizationMapperData.swift in Sources */,
+				B3EBE65B2AB4D35A00788BD2 /* DAILog.swift in Sources */,
 				B34BC16229FFE1CC00C61DE1 /* CameraRepositoryImp.swift in Sources */,
 				BAD1FCDA29F9885D00B68B7F /* AppCoordinator.swift in Sources */,
 				BAD1FCBF29F9704700B68B7F /* AppDelegate.swift in Sources */,
@@ -667,6 +694,7 @@
 				BAAFC8C029FAB98D00F991A5 /* ScannQRFactory.swift in Sources */,
 				B34BC16629FFE76100C61DE1 /* Mapper.swift in Sources */,
 				B34BC16A29FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift in Sources */,
+				B324BEBD2AB5D2C100418417 /* UDM.swift in Sources */,
 				BAD1FD0329F99B3000B68B7F /* Endpoint.swift in Sources */,
 				BAD1FCC129F9704700B68B7F /* SceneDelegate.swift in Sources */,
 				BAD1FD0129F99B2000B68B7F /* ApiClientServiceImp.swift in Sources */,
@@ -675,18 +703,22 @@
 				BAAFC8BA29FAABA200F991A5 /* ScannQRStateController.swift in Sources */,
 				BAD1FCF329F99A3900B68B7F /* HomeViewModel.swift in Sources */,
 				BAD1FD1829F99CB000B68B7F /* MessageDisplayable.swift in Sources */,
+				B31F1A9A2AC49F3C000CFD79 /* TyCStateController.swift in Sources */,
 				BAD1FCD829F9881300B68B7F /* Coordinator.swift in Sources */,
 				BAD1FD1C29F99CC200B68B7F /* CameraServiceImp.swift in Sources */,
 				BAD1FD2029F99D0A00B68B7F /* ViewValues.swift in Sources */,
 				BA95246529FC4FF6005D3CC0 /* DeviceServiceImp.swift in Sources */,
 				BA8346C72A01458400A7E802 /* ScannQRManager.swift in Sources */,
 				BA95246029FC4F0A005D3CC0 /* DeviceUseCase.swift in Sources */,
+				B31F1A9C2AC49F6E000CFD79 /* TyCViewModel.swift in Sources */,
 				BAAFC8BE29FAB7D100F991A5 /* ScannQRCoordinator.swift in Sources */,
 				BAD1FCFB29F99B0A00B68B7F /* HttpResponseStatus.swift in Sources */,
 				BAAFC8B829FAAB8700F991A5 /* ScannQRViewController.swift in Sources */,
 				BAD1FCDD29F997AB00B68B7F /* AppFactory.swift in Sources */,
 				BAD1FCF129F99A1B00B68B7F /* HomeViewController.swift in Sources */,
+				B3EBE65D2AB4D56B00788BD2 /* DAIDateFormatterFactory.swift in Sources */,
 				BAD1FCE029F9981500B68B7F /* HomeFactory.swift in Sources */,
+				B31F1A982AC49ED7000CFD79 /* TyCViewController.swift in Sources */,
 				B34BC16029FFE1A800C61DE1 /* CameraRepository.swift in Sources */,
 				BAD1FD1329F99C7600B68B7F /* UserPermissionUseCase.swift in Sources */,
 				BAD1FD1529F99C9800B68B7F /* UIView+Constraints.swift in Sources */,

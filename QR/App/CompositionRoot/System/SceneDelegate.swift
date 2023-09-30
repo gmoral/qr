@@ -13,7 +13,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var appCoordinator: Coordinator!
     var appFactory: AppFactory!
 
-
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
@@ -25,7 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigation = UINavigationController()
         let appFactory = AppFactoryImp()
         
-        window = UIWindow(windowScene: scene)
+        self.window = UIWindow(windowScene: scene)
+
+        if let window = self.window {
+            AppDelegate.shared.add(window: window)
+        }
+
         appCoordinator = AppCoordinator(
             navigation: navigation,
             appFactory: appFactory, window: window)

@@ -9,7 +9,7 @@ import Foundation
 import AVFoundation
 import UIKit
 
-struct CameraServiceImp: CameraService{
+struct CameraServiceImp: CameraService {
         
     var isAuthorized: AVAuthorizationStatus {
         get async {

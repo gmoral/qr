@@ -7,7 +7,26 @@ Two major sources of design principles are applied in this project:
 The color coding in the following diagrams adheres to the colors used in this public description of clean architecture. 
 
 ![Class](./README_files/CA.svg?raw=true "CA")
-
-![ScannQR-Clean Architecture drawio (1)](https://user-images.githubusercontent.com/805764/236645183-18413051-68ed-403e-bf34-186d7eb8debe.svg)
+![Class](./README_files/clean_architecture.svg?raw=true "Clean architecture")
 
 Each tier represents general areas of responsibility of components and the strict direction of their dependencies going from concrete volatile blue components down to the most abstract and stable yellow components. The outer layers know about any inner layers but not vice versa.
+
+
+
+## Usage
+
+### Quick Start
+
+```swift
+
+Employed industry best practices to continuously improve coding practices and test-driven development within an agile development framework.
+
+Created proof of concepts to try new technologies and tools before adding them to the current tech stack.
+
+Wrote high-quality, maintainable and reusable code using best practices (unit testing, source control, and design patterns).
+
+Act as a communication bridge between globally distributed teams.
+
+Implement Robust processes to deploy code from a code repository to the cloud.
+ 
+Took ownership of the success of the team with a "gets things done" attitude.

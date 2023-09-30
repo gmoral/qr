@@ -58,6 +58,8 @@ class HomeViewController: UIViewController {
         
         stateController()
         viewModel.viewDidLoad()
+
+        DAILog.shared.write("Hola")
     }
     
     // MARK: CUSTOM

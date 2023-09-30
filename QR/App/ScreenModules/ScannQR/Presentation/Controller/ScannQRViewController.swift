@@ -153,6 +153,7 @@ class ScannQRViewController: UIViewController {
         configureView()
         stateController()
         viewModel.viewDidLoad()
+
     }
     
     func setupView() {
