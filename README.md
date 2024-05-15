@@ -30,3 +30,6 @@ Act as a communication bridge between globally distributed teams.
 Implement Robust processes to deploy code from a code repository to the cloud.
  
 Took ownership of the success of the team with a "gets things done" attitude.
+
+
+PePe
