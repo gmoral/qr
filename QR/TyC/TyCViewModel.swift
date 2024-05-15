@@ -24,6 +24,7 @@ final class TyCViewModelImp : TyCViewModel {
 
     func viewDidLoad() {
         state.send(.start)
+        print("")
     }
 
     func aceptTermsAndConditions() {
