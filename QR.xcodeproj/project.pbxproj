@@ -19,6 +19,7 @@
 		B34BC16A29FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34BC16929FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift */; };
 		B3EBE65B2AB4D35A00788BD2 /* DAILog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBE65A2AB4D35A00788BD2 /* DAILog.swift */; };
 		B3EBE65D2AB4D56B00788BD2 /* DAIDateFormatterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EBE65C2AB4D56B00788BD2 /* DAIDateFormatterFactory.swift */; };
+		BA38C6B12BF5115300269752 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38C6B02BF5115300269752 /* Test.swift */; };
 		BA8346C72A01458400A7E802 /* ScannQRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8346C62A01458400A7E802 /* ScannQRManager.swift */; };
 		BA836A8029F9BD0C0048B177 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */; };
 		BA95245E29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */; };
@@ -68,6 +69,7 @@
 		B34BC16929FFF16700C61DE1 /* CameraAuthorizationStatusMapperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAuthorizationStatusMapperData.swift; sourceTree = "<group>"; };
 		B3EBE65A2AB4D35A00788BD2 /* DAILog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAILog.swift; sourceTree = "<group>"; };
 		B3EBE65C2AB4D56B00788BD2 /* DAIDateFormatterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAIDateFormatterFactory.swift; sourceTree = "<group>"; };
+		BA38C6B02BF5115300269752 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		BA8346C62A01458400A7E802 /* ScannQRManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannQRManager.swift; sourceTree = "<group>"; };
 		BA836A7F29F9BD0C0048B177 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		BA95245D29FBF537005D3CC0 /* AccessCameraMessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCameraMessageDisplayable.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		BAD1FCB229F9704700B68B7F = {
 			isa = PBXGroup;
 			children = (
+				BA38C6B02BF5115300269752 /* Test.swift */,
 				BAD1FCBD29F9704700B68B7F /* QR */,
 				BAD1FCBC29F9704700B68B7F /* Products */,
 			);
@@ -683,6 +686,7 @@
 			files = (
 				BAD1FD1D29F99CC200B68B7F /* CameraService.swift in Sources */,
 				BAD1FD1929F99CB000B68B7F /* SpinnerDisplayable.swift in Sources */,
+				BA38C6B12BF5115300269752 /* Test.swift in Sources */,
 				BAD1FD0029F99B2000B68B7F /* ApiClientService.swift in Sources */,
 				BAD1FD1029F99C5500B68B7F /* HomeStateController.swift in Sources */,
 				B34BC16829FFE93500C61DE1 /* CameraAuthorizationMapperData.swift in Sources */,

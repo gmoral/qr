@@ -23,6 +23,7 @@ final class TyCViewModelImp : TyCViewModel {
     }
 
     func viewDidLoad() {
+        print("")
         state.send(.start)
         print("")
     }
